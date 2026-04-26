@@ -1,20 +1,7 @@
-@font-face {
-  font-family: "ZCOOL KuaiLe";
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src:
-    url("https://registry.npmmirror.com/@fontsource/zcool-kuaile/latest/files/files/chinese-simplified-400-normal.woff2")
-      format("woff2"),
-    url("https://cdn.jsdelivr.net/fontsource/fonts/zcool-kuaile@latest/chinese-simplified-400-normal.woff2")
-      format("woff2");
-}
-
 :root {
   --font-cute:
-    "ZCOOL KuaiLe", "Wawati SC", "Hannotate SC", "HanziPen SC", "Yuppy SC",
-    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui,
-    sans-serif;
+    "Wawati SC", "Hannotate SC", "HanziPen SC", "Yuppy SC", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
   --font-readable:
     "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui,
     sans-serif;

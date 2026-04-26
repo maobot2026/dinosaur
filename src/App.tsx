@@ -11,16 +11,16 @@ import {
   Sparkles,
   Volume2,
 } from "lucide-react";
-import backgroundUrl from "./assets/rescue-valley.png";
-import dinoBrachioUrl from "./assets/cutouts/dino-brachio.png";
-import dinoRaptorUrl from "./assets/cutouts/dino-raptor.png";
-import dinoRexUrl from "./assets/cutouts/dino-rex.png";
-import dinoStegoUrl from "./assets/cutouts/dino-stego.png";
-import dinoTrikeUrl from "./assets/cutouts/dino-trike.png";
-import itemEggUrl from "./assets/cutouts/item-egg-transparent.png";
-import itemFootprintUrl from "./assets/cutouts/item-footprint-transparent.png";
-import itemFruitUrl from "./assets/cutouts/item-fruit-transparent.png";
-import itemLeafUrl from "./assets/cutouts/item-leaf-transparent.png";
+import backgroundUrl from "./assets/rescue-valley-optimized.jpg";
+import dinoBrachioUrl from "./assets/cutouts/dino-brachio-small.png";
+import dinoRaptorUrl from "./assets/cutouts/dino-raptor-small.png";
+import dinoRexUrl from "./assets/cutouts/dino-rex-small.png";
+import dinoStegoUrl from "./assets/cutouts/dino-stego-small.png";
+import dinoTrikeUrl from "./assets/cutouts/dino-trike-small.png";
+import itemEggUrl from "./assets/cutouts/item-egg-small.png";
+import itemFootprintUrl from "./assets/cutouts/item-footprint-small.png";
+import itemFruitUrl from "./assets/cutouts/item-fruit-small.png";
+import itemLeafUrl from "./assets/cutouts/item-leaf-small.png";
 import {
   Difficulty,
   Dino,
