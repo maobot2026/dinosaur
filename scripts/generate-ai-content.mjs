@@ -1,4 +1,5 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, stat, writeFile } from "node:fs/promises";
+import { spawn } from "node:child_process";
 
 const CHILD_NAME = "小宝";
 const MANIFEST_PATH = new URL("../src/aiContentManifest.json", import.meta.url);
@@ -18,8 +19,14 @@ const args = new Map(
 
 const limit = args.has("limit") ? Number(args.get("limit")) : null;
 const textOnly = args.has("text-only");
-const fallbackOnly = args.has("fallback-only") || !API_KEY;
-const shouldGenerateAudio = !fallbackOnly && !textOnly;
+const provider = args.get("provider") ?? (API_KEY ? "openai" : "fallback");
+const fallbackOnly = args.has("fallback-only") || provider === "fallback";
+const useOpenAiText = provider === "openai" && Boolean(API_KEY);
+const useOpenAiAudio = provider === "openai" && Boolean(API_KEY) && !textOnly;
+const useEdgeAudio = provider === "edge" && !textOnly;
+const shouldGenerateAudio = useOpenAiAudio || useEdgeAudio;
+const EDGE_READ_VOICE = process.env.EDGE_TTS_READ_VOICE ?? "zh-CN-XiaoyiNeural";
+const EDGE_DAD_VOICE = process.env.EDGE_TTS_DAD_VOICE ?? "zh-CN-YunxiNeural";
 
 const levels = ["valley", "nest", "river"];
 const difficulties = ["sprout", "helper", "hero"];
@@ -376,6 +383,68 @@ const generateSpeech = async (text, fileUrl) => {
   await writeFile(fileUrl, Buffer.from(await response.arrayBuffer()));
 };
 
+const run = (command, commandArgs) =>
+  new Promise((resolve, reject) => {
+    const child = spawn(command, commandArgs, { stdio: "inherit" });
+    child.on("error", reject);
+    child.on("close", (code) => {
+      if (code === 0) {
+        resolve();
+        return;
+      }
+
+      reject(new Error(`${command} exited with code ${code}`));
+    });
+  });
+
+const hasAudioFile = async (fileUrl) => {
+  try {
+    const stats = await stat(fileUrl);
+    return stats.size > 1024;
+  } catch {
+    return false;
+  }
+};
+
+const generateEdgeSpeech = async (text, fileUrl, voice, role) => {
+  if (await hasAudioFile(fileUrl)) return;
+
+  const rate = role === "read" ? "+4%" : "-4%";
+  const pitch = role === "read" ? "+10Hz" : "-2Hz";
+  const baseArgs = [
+    "-m",
+    "edge_tts",
+    "--voice",
+    voice,
+    "--text",
+    text,
+    "--write-media",
+    fileUrl.pathname,
+  ];
+  const tunedArgs = [
+    "-m",
+    "edge_tts",
+    "--voice",
+    voice,
+    `--rate=${rate}`,
+    `--pitch=${pitch}`,
+    "--text",
+    text,
+    "--write-media",
+    fileUrl.pathname,
+  ];
+
+  for (let attempt = 1; attempt <= 4; attempt += 1) {
+    try {
+      await run("python3", attempt < 4 ? tunedArgs : baseArgs);
+      return;
+    } catch (error) {
+      if (attempt === 4) throw error;
+      await new Promise((resolve) => setTimeout(resolve, 800 * attempt));
+    }
+  }
+};
+
 const makeAudioPaths = (id) => ({
   read: shouldGenerateAudio ? `ai-audio/${id}-read.mp3` : null,
   hint: shouldGenerateAudio ? `ai-audio/${id}-hint.mp3` : null,
@@ -391,13 +460,34 @@ const buildManifest = async () => {
 
   for (let index = 0; index < selectedSeeds.length; index += 1) {
     const seed = selectedSeeds[index];
-    const text = fallbackOnly ? makeFallbackText(seed, index) : await generateText(seed);
+    const text = useOpenAiText ? await generateText(seed) : makeFallbackText(seed, index);
     const audio = makeAudioPaths(seed.id);
 
-    if (shouldGenerateAudio) {
+    if (useOpenAiAudio) {
       await generateSpeech(text.promptText, new URL(`${seed.id}-read.mp3`, AUDIO_DIR));
       await generateSpeech(text.dadHintText, new URL(`${seed.id}-hint.mp3`, AUDIO_DIR));
       await generateSpeech(text.successText, new URL(`${seed.id}-success.mp3`, AUDIO_DIR));
+    }
+
+    if (useEdgeAudio) {
+      await generateEdgeSpeech(
+        text.promptText,
+        new URL(`${seed.id}-read.mp3`, AUDIO_DIR),
+        EDGE_READ_VOICE,
+        "read",
+      );
+      await generateEdgeSpeech(
+        text.dadHintText,
+        new URL(`${seed.id}-hint.mp3`, AUDIO_DIR),
+        EDGE_DAD_VOICE,
+        "dad",
+      );
+      await generateEdgeSpeech(
+        text.successText,
+        new URL(`${seed.id}-success.mp3`, AUDIO_DIR),
+        EDGE_DAD_VOICE,
+        "dad",
+      );
     }
 
     generated.push({
@@ -419,18 +509,22 @@ const buildManifest = async () => {
     });
 
     console.log(
-      `${index + 1}/${selectedSeeds.length} ${seed.id} ${fallbackOnly ? "fallback" : "openai"}`,
+      `${index + 1}/${selectedSeeds.length} ${seed.id} ${provider}`,
     );
   }
 
   const manifest = {
     version: 1,
     generatedAt: new Date().toISOString(),
-    generatedBy: fallbackOnly ? "local-fallback" : "openai",
+    generatedBy: provider,
     childName: CHILD_NAME,
-    textModel: fallbackOnly ? null : TEXT_MODEL,
-    ttsModel: shouldGenerateAudio ? TTS_MODEL : null,
-    ttsVoice: shouldGenerateAudio ? TTS_VOICE : null,
+    textModel: useOpenAiText ? TEXT_MODEL : null,
+    ttsModel: useOpenAiAudio ? TTS_MODEL : useEdgeAudio ? "edge-tts" : null,
+    ttsVoice: useOpenAiAudio
+      ? TTS_VOICE
+      : useEdgeAudio
+        ? { read: EDGE_READ_VOICE, dad: EDGE_DAD_VOICE }
+        : null,
     questions: generated,
   };
 

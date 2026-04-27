@@ -1,11 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-04-27T05:33:20.788Z",
-  "generatedBy": "local-fallback",
+  "generatedAt": "2026-04-27T14:28:41.985Z",
+  "generatedBy": "edge",
   "childName": "小宝",
   "textModel": null,
-  "ttsModel": null,
-  "ttsVoice": null,
+  "ttsModel": "edge-tts",
+  "ttsVoice": {
+    "read": "zh-CN-XiaoyiNeural",
+    "dad": "zh-CN-YunxiNeural"
+  },
   "questions": [
     {
       "id": "valley-sprout-01",
@@ -27,9 +30,9 @@
         6
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-sprout-01-read.mp3",
+        "hint": "ai-audio/valley-sprout-01-hint.mp3",
+        "success": "ai-audio/valley-sprout-01-success.mp3"
       }
     },
     {
@@ -52,9 +55,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-sprout-02-read.mp3",
+        "hint": "ai-audio/valley-sprout-02-hint.mp3",
+        "success": "ai-audio/valley-sprout-02-success.mp3"
       }
     },
     {
@@ -77,9 +80,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-sprout-03-read.mp3",
+        "hint": "ai-audio/valley-sprout-03-hint.mp3",
+        "success": "ai-audio/valley-sprout-03-success.mp3"
       }
     },
     {
@@ -102,9 +105,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-sprout-04-read.mp3",
+        "hint": "ai-audio/valley-sprout-04-hint.mp3",
+        "success": "ai-audio/valley-sprout-04-success.mp3"
       }
     },
     {
@@ -127,9 +130,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-sprout-05-read.mp3",
+        "hint": "ai-audio/valley-sprout-05-hint.mp3",
+        "success": "ai-audio/valley-sprout-05-success.mp3"
       }
     },
     {
@@ -152,9 +155,9 @@
         6
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-sprout-06-read.mp3",
+        "hint": "ai-audio/valley-sprout-06-hint.mp3",
+        "success": "ai-audio/valley-sprout-06-success.mp3"
       }
     },
     {
@@ -177,9 +180,9 @@
         6
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-sprout-07-read.mp3",
+        "hint": "ai-audio/valley-sprout-07-hint.mp3",
+        "success": "ai-audio/valley-sprout-07-success.mp3"
       }
     },
     {
@@ -202,9 +205,9 @@
         5
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-sprout-08-read.mp3",
+        "hint": "ai-audio/valley-sprout-08-hint.mp3",
+        "success": "ai-audio/valley-sprout-08-success.mp3"
       }
     },
     {
@@ -227,9 +230,9 @@
         14
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-helper-01-read.mp3",
+        "hint": "ai-audio/valley-helper-01-hint.mp3",
+        "success": "ai-audio/valley-helper-01-success.mp3"
       }
     },
     {
@@ -252,9 +255,9 @@
         14
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-helper-02-read.mp3",
+        "hint": "ai-audio/valley-helper-02-hint.mp3",
+        "success": "ai-audio/valley-helper-02-success.mp3"
       }
     },
     {
@@ -277,9 +280,9 @@
         14
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-helper-03-read.mp3",
+        "hint": "ai-audio/valley-helper-03-hint.mp3",
+        "success": "ai-audio/valley-helper-03-success.mp3"
       }
     },
     {
@@ -302,9 +305,9 @@
         15
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-helper-04-read.mp3",
+        "hint": "ai-audio/valley-helper-04-hint.mp3",
+        "success": "ai-audio/valley-helper-04-success.mp3"
       }
     },
     {
@@ -327,9 +330,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-helper-05-read.mp3",
+        "hint": "ai-audio/valley-helper-05-hint.mp3",
+        "success": "ai-audio/valley-helper-05-success.mp3"
       }
     },
     {
@@ -352,9 +355,9 @@
         8
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-helper-06-read.mp3",
+        "hint": "ai-audio/valley-helper-06-hint.mp3",
+        "success": "ai-audio/valley-helper-06-success.mp3"
       }
     },
     {
@@ -377,9 +380,9 @@
         8
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-helper-07-read.mp3",
+        "hint": "ai-audio/valley-helper-07-hint.mp3",
+        "success": "ai-audio/valley-helper-07-success.mp3"
       }
     },
     {
@@ -402,9 +405,9 @@
         6
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-helper-08-read.mp3",
+        "hint": "ai-audio/valley-helper-08-hint.mp3",
+        "success": "ai-audio/valley-helper-08-success.mp3"
       }
     },
     {
@@ -427,9 +430,9 @@
         18
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-hero-01-read.mp3",
+        "hint": "ai-audio/valley-hero-01-hint.mp3",
+        "success": "ai-audio/valley-hero-01-success.mp3"
       }
     },
     {
@@ -452,9 +455,9 @@
         19
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-hero-02-read.mp3",
+        "hint": "ai-audio/valley-hero-02-hint.mp3",
+        "success": "ai-audio/valley-hero-02-success.mp3"
       }
     },
     {
@@ -477,9 +480,9 @@
         20
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-hero-03-read.mp3",
+        "hint": "ai-audio/valley-hero-03-hint.mp3",
+        "success": "ai-audio/valley-hero-03-success.mp3"
       }
     },
     {
@@ -502,9 +505,9 @@
         20
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-hero-04-read.mp3",
+        "hint": "ai-audio/valley-hero-04-hint.mp3",
+        "success": "ai-audio/valley-hero-04-success.mp3"
       }
     },
     {
@@ -527,9 +530,9 @@
         14
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-hero-05-read.mp3",
+        "hint": "ai-audio/valley-hero-05-hint.mp3",
+        "success": "ai-audio/valley-hero-05-success.mp3"
       }
     },
     {
@@ -552,9 +555,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-hero-06-read.mp3",
+        "hint": "ai-audio/valley-hero-06-hint.mp3",
+        "success": "ai-audio/valley-hero-06-success.mp3"
       }
     },
     {
@@ -577,9 +580,9 @@
         9
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-hero-07-read.mp3",
+        "hint": "ai-audio/valley-hero-07-hint.mp3",
+        "success": "ai-audio/valley-hero-07-success.mp3"
       }
     },
     {
@@ -602,9 +605,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/valley-hero-08-read.mp3",
+        "hint": "ai-audio/valley-hero-08-hint.mp3",
+        "success": "ai-audio/valley-hero-08-success.mp3"
       }
     },
     {
@@ -627,9 +630,9 @@
         6
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-sprout-01-read.mp3",
+        "hint": "ai-audio/nest-sprout-01-hint.mp3",
+        "success": "ai-audio/nest-sprout-01-success.mp3"
       }
     },
     {
@@ -652,9 +655,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-sprout-02-read.mp3",
+        "hint": "ai-audio/nest-sprout-02-hint.mp3",
+        "success": "ai-audio/nest-sprout-02-success.mp3"
       }
     },
     {
@@ -677,9 +680,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-sprout-03-read.mp3",
+        "hint": "ai-audio/nest-sprout-03-hint.mp3",
+        "success": "ai-audio/nest-sprout-03-success.mp3"
       }
     },
     {
@@ -702,9 +705,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-sprout-04-read.mp3",
+        "hint": "ai-audio/nest-sprout-04-hint.mp3",
+        "success": "ai-audio/nest-sprout-04-success.mp3"
       }
     },
     {
@@ -727,9 +730,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-sprout-05-read.mp3",
+        "hint": "ai-audio/nest-sprout-05-hint.mp3",
+        "success": "ai-audio/nest-sprout-05-success.mp3"
       }
     },
     {
@@ -752,9 +755,9 @@
         6
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-sprout-06-read.mp3",
+        "hint": "ai-audio/nest-sprout-06-hint.mp3",
+        "success": "ai-audio/nest-sprout-06-success.mp3"
       }
     },
     {
@@ -777,9 +780,9 @@
         6
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-sprout-07-read.mp3",
+        "hint": "ai-audio/nest-sprout-07-hint.mp3",
+        "success": "ai-audio/nest-sprout-07-success.mp3"
       }
     },
     {
@@ -802,9 +805,9 @@
         5
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-sprout-08-read.mp3",
+        "hint": "ai-audio/nest-sprout-08-hint.mp3",
+        "success": "ai-audio/nest-sprout-08-success.mp3"
       }
     },
     {
@@ -827,9 +830,9 @@
         14
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-helper-01-read.mp3",
+        "hint": "ai-audio/nest-helper-01-hint.mp3",
+        "success": "ai-audio/nest-helper-01-success.mp3"
       }
     },
     {
@@ -852,9 +855,9 @@
         14
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-helper-02-read.mp3",
+        "hint": "ai-audio/nest-helper-02-hint.mp3",
+        "success": "ai-audio/nest-helper-02-success.mp3"
       }
     },
     {
@@ -877,9 +880,9 @@
         14
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-helper-03-read.mp3",
+        "hint": "ai-audio/nest-helper-03-hint.mp3",
+        "success": "ai-audio/nest-helper-03-success.mp3"
       }
     },
     {
@@ -902,9 +905,9 @@
         15
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-helper-04-read.mp3",
+        "hint": "ai-audio/nest-helper-04-hint.mp3",
+        "success": "ai-audio/nest-helper-04-success.mp3"
       }
     },
     {
@@ -927,9 +930,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-helper-05-read.mp3",
+        "hint": "ai-audio/nest-helper-05-hint.mp3",
+        "success": "ai-audio/nest-helper-05-success.mp3"
       }
     },
     {
@@ -952,9 +955,9 @@
         8
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-helper-06-read.mp3",
+        "hint": "ai-audio/nest-helper-06-hint.mp3",
+        "success": "ai-audio/nest-helper-06-success.mp3"
       }
     },
     {
@@ -977,9 +980,9 @@
         8
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-helper-07-read.mp3",
+        "hint": "ai-audio/nest-helper-07-hint.mp3",
+        "success": "ai-audio/nest-helper-07-success.mp3"
       }
     },
     {
@@ -1002,9 +1005,9 @@
         6
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-helper-08-read.mp3",
+        "hint": "ai-audio/nest-helper-08-hint.mp3",
+        "success": "ai-audio/nest-helper-08-success.mp3"
       }
     },
     {
@@ -1027,9 +1030,9 @@
         18
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-hero-01-read.mp3",
+        "hint": "ai-audio/nest-hero-01-hint.mp3",
+        "success": "ai-audio/nest-hero-01-success.mp3"
       }
     },
     {
@@ -1052,9 +1055,9 @@
         19
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-hero-02-read.mp3",
+        "hint": "ai-audio/nest-hero-02-hint.mp3",
+        "success": "ai-audio/nest-hero-02-success.mp3"
       }
     },
     {
@@ -1077,9 +1080,9 @@
         20
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-hero-03-read.mp3",
+        "hint": "ai-audio/nest-hero-03-hint.mp3",
+        "success": "ai-audio/nest-hero-03-success.mp3"
       }
     },
     {
@@ -1102,9 +1105,9 @@
         20
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-hero-04-read.mp3",
+        "hint": "ai-audio/nest-hero-04-hint.mp3",
+        "success": "ai-audio/nest-hero-04-success.mp3"
       }
     },
     {
@@ -1127,9 +1130,9 @@
         14
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-hero-05-read.mp3",
+        "hint": "ai-audio/nest-hero-05-hint.mp3",
+        "success": "ai-audio/nest-hero-05-success.mp3"
       }
     },
     {
@@ -1152,9 +1155,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-hero-06-read.mp3",
+        "hint": "ai-audio/nest-hero-06-hint.mp3",
+        "success": "ai-audio/nest-hero-06-success.mp3"
       }
     },
     {
@@ -1177,9 +1180,9 @@
         9
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-hero-07-read.mp3",
+        "hint": "ai-audio/nest-hero-07-hint.mp3",
+        "success": "ai-audio/nest-hero-07-success.mp3"
       }
     },
     {
@@ -1202,9 +1205,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/nest-hero-08-read.mp3",
+        "hint": "ai-audio/nest-hero-08-hint.mp3",
+        "success": "ai-audio/nest-hero-08-success.mp3"
       }
     },
     {
@@ -1227,9 +1230,9 @@
         6
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-sprout-01-read.mp3",
+        "hint": "ai-audio/river-sprout-01-hint.mp3",
+        "success": "ai-audio/river-sprout-01-success.mp3"
       }
     },
     {
@@ -1252,9 +1255,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-sprout-02-read.mp3",
+        "hint": "ai-audio/river-sprout-02-hint.mp3",
+        "success": "ai-audio/river-sprout-02-success.mp3"
       }
     },
     {
@@ -1277,9 +1280,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-sprout-03-read.mp3",
+        "hint": "ai-audio/river-sprout-03-hint.mp3",
+        "success": "ai-audio/river-sprout-03-success.mp3"
       }
     },
     {
@@ -1302,9 +1305,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-sprout-04-read.mp3",
+        "hint": "ai-audio/river-sprout-04-hint.mp3",
+        "success": "ai-audio/river-sprout-04-success.mp3"
       }
     },
     {
@@ -1327,9 +1330,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-sprout-05-read.mp3",
+        "hint": "ai-audio/river-sprout-05-hint.mp3",
+        "success": "ai-audio/river-sprout-05-success.mp3"
       }
     },
     {
@@ -1352,9 +1355,9 @@
         6
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-sprout-06-read.mp3",
+        "hint": "ai-audio/river-sprout-06-hint.mp3",
+        "success": "ai-audio/river-sprout-06-success.mp3"
       }
     },
     {
@@ -1377,9 +1380,9 @@
         6
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-sprout-07-read.mp3",
+        "hint": "ai-audio/river-sprout-07-hint.mp3",
+        "success": "ai-audio/river-sprout-07-success.mp3"
       }
     },
     {
@@ -1402,9 +1405,9 @@
         5
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-sprout-08-read.mp3",
+        "hint": "ai-audio/river-sprout-08-hint.mp3",
+        "success": "ai-audio/river-sprout-08-success.mp3"
       }
     },
     {
@@ -1427,9 +1430,9 @@
         14
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-helper-01-read.mp3",
+        "hint": "ai-audio/river-helper-01-hint.mp3",
+        "success": "ai-audio/river-helper-01-success.mp3"
       }
     },
     {
@@ -1452,9 +1455,9 @@
         14
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-helper-02-read.mp3",
+        "hint": "ai-audio/river-helper-02-hint.mp3",
+        "success": "ai-audio/river-helper-02-success.mp3"
       }
     },
     {
@@ -1477,9 +1480,9 @@
         14
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-helper-03-read.mp3",
+        "hint": "ai-audio/river-helper-03-hint.mp3",
+        "success": "ai-audio/river-helper-03-success.mp3"
       }
     },
     {
@@ -1502,9 +1505,9 @@
         15
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-helper-04-read.mp3",
+        "hint": "ai-audio/river-helper-04-hint.mp3",
+        "success": "ai-audio/river-helper-04-success.mp3"
       }
     },
     {
@@ -1527,9 +1530,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-helper-05-read.mp3",
+        "hint": "ai-audio/river-helper-05-hint.mp3",
+        "success": "ai-audio/river-helper-05-success.mp3"
       }
     },
     {
@@ -1552,9 +1555,9 @@
         8
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-helper-06-read.mp3",
+        "hint": "ai-audio/river-helper-06-hint.mp3",
+        "success": "ai-audio/river-helper-06-success.mp3"
       }
     },
     {
@@ -1577,9 +1580,9 @@
         8
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-helper-07-read.mp3",
+        "hint": "ai-audio/river-helper-07-hint.mp3",
+        "success": "ai-audio/river-helper-07-success.mp3"
       }
     },
     {
@@ -1602,9 +1605,9 @@
         6
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-helper-08-read.mp3",
+        "hint": "ai-audio/river-helper-08-hint.mp3",
+        "success": "ai-audio/river-helper-08-success.mp3"
       }
     },
     {
@@ -1627,9 +1630,9 @@
         18
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-hero-01-read.mp3",
+        "hint": "ai-audio/river-hero-01-hint.mp3",
+        "success": "ai-audio/river-hero-01-success.mp3"
       }
     },
     {
@@ -1652,9 +1655,9 @@
         19
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-hero-02-read.mp3",
+        "hint": "ai-audio/river-hero-02-hint.mp3",
+        "success": "ai-audio/river-hero-02-success.mp3"
       }
     },
     {
@@ -1677,9 +1680,9 @@
         20
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-hero-03-read.mp3",
+        "hint": "ai-audio/river-hero-03-hint.mp3",
+        "success": "ai-audio/river-hero-03-success.mp3"
       }
     },
     {
@@ -1702,9 +1705,9 @@
         20
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-hero-04-read.mp3",
+        "hint": "ai-audio/river-hero-04-hint.mp3",
+        "success": "ai-audio/river-hero-04-success.mp3"
       }
     },
     {
@@ -1727,9 +1730,9 @@
         14
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-hero-05-read.mp3",
+        "hint": "ai-audio/river-hero-05-hint.mp3",
+        "success": "ai-audio/river-hero-05-success.mp3"
       }
     },
     {
@@ -1752,9 +1755,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-hero-06-read.mp3",
+        "hint": "ai-audio/river-hero-06-hint.mp3",
+        "success": "ai-audio/river-hero-06-success.mp3"
       }
     },
     {
@@ -1777,9 +1780,9 @@
         9
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-hero-07-read.mp3",
+        "hint": "ai-audio/river-hero-07-hint.mp3",
+        "success": "ai-audio/river-hero-07-success.mp3"
       }
     },
     {
@@ -1802,9 +1805,9 @@
         10
       ],
       "audio": {
-        "read": null,
-        "hint": null,
-        "success": null
+        "read": "ai-audio/river-hero-08-read.mp3",
+        "hint": "ai-audio/river-hero-08-hint.mp3",
+        "success": "ai-audio/river-hero-08-success.mp3"
       }
     }
   ]
