@@ -1,0 +1,1811 @@
+{
+  "version": 1,
+  "generatedAt": "2026-04-27T05:33:20.788Z",
+  "generatedBy": "local-fallback",
+  "childName": "小宝",
+  "textModel": null,
+  "ttsModel": null,
+  "ttsVoice": null,
+  "questions": [
+    {
+      "id": "valley-sprout-01",
+      "level": "valley",
+      "difficulty": "sprout",
+      "operation": "add",
+      "left": 2,
+      "right": 3,
+      "answer": 5,
+      "prompt": "蓝蓝先找到 2 片嫩叶，救援队又送来 3 片。蓝蓝一共有几片嫩叶？",
+      "promptText": "小宝，爸爸来读救援任务。蓝蓝先找到 2 片嫩叶，救援队又送来 3 片。蓝蓝一共有几片嫩叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先看 2 片树叶，再接着数 3 个。每五个放一小堆，数起来更清楚，答案就是 5。",
+      "successText": "小宝答对啦！小恐龙站起来挥挥手，救援队继续前进。",
+      "mission": "喂饱小伙伴",
+      "hintType": "leaf",
+      "options": [
+        4,
+        5,
+        6
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-sprout-02",
+      "level": "valley",
+      "difficulty": "sprout",
+      "operation": "add",
+      "left": 4,
+      "right": 5,
+      "answer": 9,
+      "prompt": "紫点发现 4 个小脚印，草丛边又有 5 个。救援队一共看见几个脚印？",
+      "promptText": "小宝，爸爸来读救援任务。紫点发现 4 个小脚印，草丛边又有 5 个。救援队一共看见几个脚印？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先看 4 个脚印，再接着数 5 个。每五个放一小堆，数起来更清楚，答案就是 9。",
+      "successText": "小宝真棒！补给送到了，小恐龙的眼睛亮起来啦。",
+      "mission": "找到脚印路",
+      "hintType": "footprint",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-sprout-03",
+      "level": "valley",
+      "difficulty": "sprout",
+      "operation": "add",
+      "left": 6,
+      "right": 3,
+      "answer": 9,
+      "prompt": "蓝蓝先找到 6 片嫩叶，救援队又送来 3 片。蓝蓝一共有几片嫩叶？",
+      "promptText": "小宝，爸爸来读救援任务。蓝蓝先找到 6 片嫩叶，救援队又送来 3 片。蓝蓝一共有几片嫩叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先看 6 片树叶，再接着数 3 个。每五个放一小堆，数起来更清楚，答案就是 9。",
+      "successText": "答对啦小宝！恐龙宝宝开心地跳了一下。",
+      "mission": "喂饱小伙伴",
+      "hintType": "leaf",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-sprout-04",
+      "level": "valley",
+      "difficulty": "sprout",
+      "operation": "add",
+      "left": 1,
+      "right": 8,
+      "answer": 9,
+      "prompt": "紫点发现 1 个小脚印，草丛边又有 8 个。救援队一共看见几个脚印？",
+      "promptText": "小宝，爸爸来读救援任务。紫点发现 1 个小脚印，草丛边又有 8 个。救援队一共看见几个脚印？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先看 1 个脚印，再接着数 8 个。每五个放一小堆，数起来更清楚，答案就是 9。",
+      "successText": "小宝救援成功！爸爸给你一颗亮亮星。",
+      "mission": "找到脚印路",
+      "hintType": "footprint",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-sprout-05",
+      "level": "valley",
+      "difficulty": "sprout",
+      "operation": "add",
+      "left": 7,
+      "right": 2,
+      "answer": 9,
+      "prompt": "蓝蓝先找到 7 片嫩叶，救援队又送来 2 片。蓝蓝一共有几片嫩叶？",
+      "promptText": "小宝，爸爸来读救援任务。蓝蓝先找到 7 片嫩叶，救援队又送来 2 片。蓝蓝一共有几片嫩叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先看 7 片树叶，再接着数 2 个。每五个放一小堆，数起来更清楚，答案就是 9。",
+      "successText": "太好了小宝！小恐龙有力气跟着队伍走啦。",
+      "mission": "喂饱小伙伴",
+      "hintType": "leaf",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-sprout-06",
+      "level": "valley",
+      "difficulty": "sprout",
+      "operation": "subtract",
+      "left": 9,
+      "right": 4,
+      "answer": 5,
+      "prompt": "泥地上有 9 个脚印，风吹淡了 4 个。小队还能看到几个脚印？",
+      "promptText": "小宝，爸爸来读救援任务。泥地上有 9 个脚印，风吹淡了 4 个。小队还能看到几个脚印？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先摆好 9 个脚印，再轻轻拿走 4 个。留下来的就是 5。",
+      "successText": "小宝选对了！救援徽章闪闪发光。",
+      "mission": "确认路线",
+      "hintType": "footprint",
+      "options": [
+        4,
+        5,
+        6
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-sprout-07",
+      "level": "valley",
+      "difficulty": "sprout",
+      "operation": "subtract",
+      "left": 8,
+      "right": 3,
+      "answer": 5,
+      "prompt": "长脖有 8 片树叶，分给宝宝 3 片。长脖还剩几片树叶？",
+      "promptText": "小宝，爸爸来读救援任务。长脖有 8 片树叶，分给宝宝 3 片。长脖还剩几片树叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先摆好 8 片树叶，再轻轻拿走 3 个。留下来的就是 5。",
+      "successText": "答对啦！爸爸看到小宝数得很认真。",
+      "mission": "分享嫩叶",
+      "hintType": "leaf",
+      "options": [
+        4,
+        5,
+        6
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-sprout-08",
+      "level": "valley",
+      "difficulty": "sprout",
+      "operation": "subtract",
+      "left": 10,
+      "right": 6,
+      "answer": 4,
+      "prompt": "泥地上有 10 个脚印，风吹淡了 6 个。小队还能看到几个脚印？",
+      "promptText": "小宝，爸爸来读救援任务。泥地上有 10 个脚印，风吹淡了 6 个。小队还能看到几个脚印？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先摆好 10 个脚印，再轻轻拿走 6 个。留下来的就是 4。",
+      "successText": "小宝真厉害！恐龙朋友离安全营地更近啦。",
+      "mission": "确认路线",
+      "hintType": "footprint",
+      "options": [
+        3,
+        4,
+        5
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-helper-01",
+      "level": "valley",
+      "difficulty": "helper",
+      "operation": "add",
+      "left": 8,
+      "right": 5,
+      "answer": 13,
+      "prompt": "蓝蓝先找到 8 片嫩叶，救援队又送来 5 片。蓝蓝一共有几片嫩叶？",
+      "promptText": "小宝，爸爸来读救援任务。蓝蓝先找到 8 片嫩叶，救援队又送来 5 片。蓝蓝一共有几片嫩叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。8 差 2 个到十。可以把 5 片树叶分成 2 个和 3 个，先凑成十，再加 3，就是 13。",
+      "successText": "小宝答对啦！小恐龙站起来挥挥手，救援队继续前进。",
+      "mission": "喂饱小伙伴",
+      "hintType": "leaf",
+      "options": [
+        12,
+        13,
+        14
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-helper-02",
+      "level": "valley",
+      "difficulty": "helper",
+      "operation": "add",
+      "left": 7,
+      "right": 6,
+      "answer": 13,
+      "prompt": "紫点发现 7 个小脚印，草丛边又有 6 个。救援队一共看见几个脚印？",
+      "promptText": "小宝，爸爸来读救援任务。紫点发现 7 个小脚印，草丛边又有 6 个。救援队一共看见几个脚印？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。7 差 3 个到十。可以把 6 个脚印分成 3 个和 3 个，先凑成十，再加 3，就是 13。",
+      "successText": "小宝真棒！补给送到了，小恐龙的眼睛亮起来啦。",
+      "mission": "找到脚印路",
+      "hintType": "footprint",
+      "options": [
+        12,
+        13,
+        14
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-helper-03",
+      "level": "valley",
+      "difficulty": "helper",
+      "operation": "add",
+      "left": 9,
+      "right": 4,
+      "answer": 13,
+      "prompt": "蓝蓝先找到 9 片嫩叶，救援队又送来 4 片。蓝蓝一共有几片嫩叶？",
+      "promptText": "小宝，爸爸来读救援任务。蓝蓝先找到 9 片嫩叶，救援队又送来 4 片。蓝蓝一共有几片嫩叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。9 差 1 个到十。可以把 4 片树叶分成 1 个和 3 个，先凑成十，再加 3，就是 13。",
+      "successText": "答对啦小宝！恐龙宝宝开心地跳了一下。",
+      "mission": "喂饱小伙伴",
+      "hintType": "leaf",
+      "options": [
+        12,
+        13,
+        14
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-helper-04",
+      "level": "valley",
+      "difficulty": "helper",
+      "operation": "add",
+      "left": 6,
+      "right": 8,
+      "answer": 14,
+      "prompt": "紫点发现 6 个小脚印，草丛边又有 8 个。救援队一共看见几个脚印？",
+      "promptText": "小宝，爸爸来读救援任务。紫点发现 6 个小脚印，草丛边又有 8 个。救援队一共看见几个脚印？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。6 差 4 个到十。可以把 8 个脚印分成 4 个和 4 个，先凑成十，再加 4，就是 14。",
+      "successText": "小宝救援成功！爸爸给你一颗亮亮星。",
+      "mission": "找到脚印路",
+      "hintType": "footprint",
+      "options": [
+        13,
+        14,
+        15
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-helper-05",
+      "level": "valley",
+      "difficulty": "helper",
+      "operation": "subtract",
+      "left": 14,
+      "right": 5,
+      "answer": 9,
+      "prompt": "长脖有 14 片树叶，分给宝宝 5 片。长脖还剩几片树叶？",
+      "promptText": "小宝，爸爸来读救援任务。长脖有 14 片树叶，分给宝宝 5 片。长脖还剩几片树叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。14 可以看成十和 4。先拿走小尾巴 4 个，还要从十里面再拿 1 个，所以剩 9。",
+      "successText": "太好了小宝！小恐龙有力气跟着队伍走啦。",
+      "mission": "分享嫩叶",
+      "hintType": "leaf",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-helper-06",
+      "level": "valley",
+      "difficulty": "helper",
+      "operation": "subtract",
+      "left": 13,
+      "right": 6,
+      "answer": 7,
+      "prompt": "泥地上有 13 个脚印，风吹淡了 6 个。小队还能看到几个脚印？",
+      "promptText": "小宝，爸爸来读救援任务。泥地上有 13 个脚印，风吹淡了 6 个。小队还能看到几个脚印？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。13 可以看成十和 3。先拿走小尾巴 3 个，还要从十里面再拿 3 个，所以剩 7。",
+      "successText": "小宝选对了！救援徽章闪闪发光。",
+      "mission": "确认路线",
+      "hintType": "footprint",
+      "options": [
+        6,
+        7,
+        8
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-helper-07",
+      "level": "valley",
+      "difficulty": "helper",
+      "operation": "subtract",
+      "left": 15,
+      "right": 8,
+      "answer": 7,
+      "prompt": "长脖有 15 片树叶，分给宝宝 8 片。长脖还剩几片树叶？",
+      "promptText": "小宝，爸爸来读救援任务。长脖有 15 片树叶，分给宝宝 8 片。长脖还剩几片树叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。15 可以看成十和 5。先拿走小尾巴 5 个，还要从十里面再拿 3 个，所以剩 7。",
+      "successText": "答对啦！爸爸看到小宝数得很认真。",
+      "mission": "分享嫩叶",
+      "hintType": "leaf",
+      "options": [
+        6,
+        7,
+        8
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-helper-08",
+      "level": "valley",
+      "difficulty": "helper",
+      "operation": "subtract",
+      "left": 12,
+      "right": 7,
+      "answer": 5,
+      "prompt": "泥地上有 12 个脚印，风吹淡了 7 个。小队还能看到几个脚印？",
+      "promptText": "小宝，爸爸来读救援任务。泥地上有 12 个脚印，风吹淡了 7 个。小队还能看到几个脚印？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。12 可以看成十和 2。先拿走小尾巴 2 个，还要从十里面再拿 5 个，所以剩 5。",
+      "successText": "小宝真厉害！恐龙朋友离安全营地更近啦。",
+      "mission": "确认路线",
+      "hintType": "footprint",
+      "options": [
+        4,
+        5,
+        6
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-hero-01",
+      "level": "valley",
+      "difficulty": "hero",
+      "operation": "add",
+      "left": 9,
+      "right": 8,
+      "answer": 17,
+      "prompt": "蓝蓝先找到 9 片嫩叶，救援队又送来 8 片。蓝蓝一共有几片嫩叶？",
+      "promptText": "小宝，爸爸来读救援任务。蓝蓝先找到 9 片嫩叶，救援队又送来 8 片。蓝蓝一共有几片嫩叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。9 差 1 个到十。可以把 8 片树叶分成 1 个和 7 个，先凑成十，再加 7，就是 17。",
+      "successText": "小宝答对啦！小恐龙站起来挥挥手，救援队继续前进。",
+      "mission": "喂饱小伙伴",
+      "hintType": "leaf",
+      "options": [
+        16,
+        17,
+        18
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-hero-02",
+      "level": "valley",
+      "difficulty": "hero",
+      "operation": "add",
+      "left": 12,
+      "right": 6,
+      "answer": 18,
+      "prompt": "紫点发现 12 个小脚印，草丛边又有 6 个。救援队一共看见几个脚印？",
+      "promptText": "小宝，爸爸来读救援任务。紫点发现 12 个小脚印，草丛边又有 6 个。救援队一共看见几个脚印？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。6 差 4 个到十。可以从 12 个脚印里拿 4 个过去，先凑成十，再加 8，就是 18。",
+      "successText": "小宝真棒！补给送到了，小恐龙的眼睛亮起来啦。",
+      "mission": "找到脚印路",
+      "hintType": "footprint",
+      "options": [
+        17,
+        18,
+        19
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-hero-03",
+      "level": "valley",
+      "difficulty": "hero",
+      "operation": "add",
+      "left": 7,
+      "right": 13,
+      "answer": 20,
+      "prompt": "蓝蓝先找到 7 片嫩叶，救援队又送来 13 片。蓝蓝一共有几片嫩叶？",
+      "promptText": "小宝，爸爸来读救援任务。蓝蓝先找到 7 片嫩叶，救援队又送来 13 片。蓝蓝一共有几片嫩叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。7 差 3 个到十。可以把 13 片树叶分成 3 个和 10 个，先凑成十，再加 10，就是 20。",
+      "successText": "答对啦小宝！恐龙宝宝开心地跳了一下。",
+      "mission": "喂饱小伙伴",
+      "hintType": "leaf",
+      "options": [
+        18,
+        19,
+        20
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-hero-04",
+      "level": "valley",
+      "difficulty": "hero",
+      "operation": "add",
+      "left": 11,
+      "right": 8,
+      "answer": 19,
+      "prompt": "紫点发现 11 个小脚印，草丛边又有 8 个。救援队一共看见几个脚印？",
+      "promptText": "小宝，爸爸来读救援任务。紫点发现 11 个小脚印，草丛边又有 8 个。救援队一共看见几个脚印？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。8 差 2 个到十。可以从 11 个脚印里拿 2 个过去，先凑成十，再加 9，就是 19。",
+      "successText": "小宝救援成功！爸爸给你一颗亮亮星。",
+      "mission": "找到脚印路",
+      "hintType": "footprint",
+      "options": [
+        18,
+        19,
+        20
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-hero-05",
+      "level": "valley",
+      "difficulty": "hero",
+      "operation": "subtract",
+      "left": 20,
+      "right": 7,
+      "answer": 13,
+      "prompt": "长脖有 20 片树叶，分给宝宝 7 片。长脖还剩几片树叶？",
+      "promptText": "小宝，爸爸来读救援任务。长脖有 20 片树叶，分给宝宝 7 片。长脖还剩几片树叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。20 可以看成十和 10。先从小尾巴里拿走 7 个，还剩 13。",
+      "successText": "太好了小宝！小恐龙有力气跟着队伍走啦。",
+      "mission": "分享嫩叶",
+      "hintType": "leaf",
+      "options": [
+        12,
+        13,
+        14
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-hero-06",
+      "level": "valley",
+      "difficulty": "hero",
+      "operation": "subtract",
+      "left": 18,
+      "right": 9,
+      "answer": 9,
+      "prompt": "泥地上有 18 个脚印，风吹淡了 9 个。小队还能看到几个脚印？",
+      "promptText": "小宝，爸爸来读救援任务。泥地上有 18 个脚印，风吹淡了 9 个。小队还能看到几个脚印？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。18 可以看成十和 8。先拿走小尾巴 8 个，还要从十里面再拿 1 个，所以剩 9。",
+      "successText": "小宝选对了！救援徽章闪闪发光。",
+      "mission": "确认路线",
+      "hintType": "footprint",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-hero-07",
+      "level": "valley",
+      "difficulty": "hero",
+      "operation": "subtract",
+      "left": 16,
+      "right": 8,
+      "answer": 8,
+      "prompt": "长脖有 16 片树叶，分给宝宝 8 片。长脖还剩几片树叶？",
+      "promptText": "小宝，爸爸来读救援任务。长脖有 16 片树叶，分给宝宝 8 片。长脖还剩几片树叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。16 可以看成十和 6。先拿走小尾巴 6 个，还要从十里面再拿 2 个，所以剩 8。",
+      "successText": "答对啦！爸爸看到小宝数得很认真。",
+      "mission": "分享嫩叶",
+      "hintType": "leaf",
+      "options": [
+        7,
+        8,
+        9
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "valley-hero-08",
+      "level": "valley",
+      "difficulty": "hero",
+      "operation": "subtract",
+      "left": 15,
+      "right": 6,
+      "answer": 9,
+      "prompt": "泥地上有 15 个脚印，风吹淡了 6 个。小队还能看到几个脚印？",
+      "promptText": "小宝，爸爸来读救援任务。泥地上有 15 个脚印，风吹淡了 6 个。小队还能看到几个脚印？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。15 可以看成十和 5。先拿走小尾巴 5 个，还要从十里面再拿 1 个，所以剩 9。",
+      "successText": "小宝真厉害！恐龙朋友离安全营地更近啦。",
+      "mission": "确认路线",
+      "hintType": "footprint",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-sprout-01",
+      "level": "nest",
+      "difficulty": "sprout",
+      "operation": "add",
+      "left": 2,
+      "right": 3,
+      "answer": 5,
+      "prompt": "暖暖窝里有 2 颗恐龙蛋，爸爸救援队又送回 3 颗。窝里一共有几颗蛋？",
+      "promptText": "小宝，爸爸来读救援任务。暖暖窝里有 2 颗恐龙蛋，爸爸救援队又送回 3 颗。窝里一共有几颗蛋？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先看 2 颗恐龙蛋，再接着数 3 个。每五个放一小堆，数起来更清楚，答案就是 5。",
+      "successText": "小宝答对啦！小恐龙站起来挥挥手，救援队继续前进。",
+      "mission": "保护蛋窝",
+      "hintType": "egg",
+      "options": [
+        4,
+        5,
+        6
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-sprout-02",
+      "level": "nest",
+      "difficulty": "sprout",
+      "operation": "add",
+      "left": 4,
+      "right": 5,
+      "answer": 9,
+      "prompt": "蛋窝旁边有 4 片软树叶，团团又铺上 5 片。现在有几片树叶？",
+      "promptText": "小宝，爸爸来读救援任务。蛋窝旁边有 4 片软树叶，团团又铺上 5 片。现在有几片树叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先看 4 片树叶，再接着数 5 个。每五个放一小堆，数起来更清楚，答案就是 9。",
+      "successText": "小宝真棒！补给送到了，小恐龙的眼睛亮起来啦。",
+      "mission": "补充嫩叶",
+      "hintType": "leaf",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-sprout-03",
+      "level": "nest",
+      "difficulty": "sprout",
+      "operation": "add",
+      "left": 6,
+      "right": 3,
+      "answer": 9,
+      "prompt": "暖暖窝里有 6 颗恐龙蛋，爸爸救援队又送回 3 颗。窝里一共有几颗蛋？",
+      "promptText": "小宝，爸爸来读救援任务。暖暖窝里有 6 颗恐龙蛋，爸爸救援队又送回 3 颗。窝里一共有几颗蛋？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先看 6 颗恐龙蛋，再接着数 3 个。每五个放一小堆，数起来更清楚，答案就是 9。",
+      "successText": "答对啦小宝！恐龙宝宝开心地跳了一下。",
+      "mission": "保护蛋窝",
+      "hintType": "egg",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-sprout-04",
+      "level": "nest",
+      "difficulty": "sprout",
+      "operation": "add",
+      "left": 1,
+      "right": 8,
+      "answer": 9,
+      "prompt": "蛋窝旁边有 1 片软树叶，团团又铺上 8 片。现在有几片树叶？",
+      "promptText": "小宝，爸爸来读救援任务。蛋窝旁边有 1 片软树叶，团团又铺上 8 片。现在有几片树叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先看 1 片树叶，再接着数 8 个。每五个放一小堆，数起来更清楚，答案就是 9。",
+      "successText": "小宝救援成功！爸爸给你一颗亮亮星。",
+      "mission": "补充嫩叶",
+      "hintType": "leaf",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-sprout-05",
+      "level": "nest",
+      "difficulty": "sprout",
+      "operation": "add",
+      "left": 7,
+      "right": 2,
+      "answer": 9,
+      "prompt": "暖暖窝里有 7 颗恐龙蛋，爸爸救援队又送回 2 颗。窝里一共有几颗蛋？",
+      "promptText": "小宝，爸爸来读救援任务。暖暖窝里有 7 颗恐龙蛋，爸爸救援队又送回 2 颗。窝里一共有几颗蛋？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先看 7 颗恐龙蛋，再接着数 2 个。每五个放一小堆，数起来更清楚，答案就是 9。",
+      "successText": "太好了小宝！小恐龙有力气跟着队伍走啦。",
+      "mission": "保护蛋窝",
+      "hintType": "egg",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-sprout-06",
+      "level": "nest",
+      "difficulty": "sprout",
+      "operation": "subtract",
+      "left": 9,
+      "right": 4,
+      "answer": 5,
+      "prompt": "蛋窝里铺了 9 片树叶，小队拿走 4 片去盖小蛋。蛋窝还剩几片树叶？",
+      "promptText": "小宝，爸爸来读救援任务。蛋窝里铺了 9 片树叶，小队拿走 4 片去盖小蛋。蛋窝还剩几片树叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先摆好 9 片树叶，再轻轻拿走 4 个。留下来的就是 5。",
+      "successText": "小宝选对了！救援徽章闪闪发光。",
+      "mission": "整理蛋窝",
+      "hintType": "leaf",
+      "options": [
+        4,
+        5,
+        6
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-sprout-07",
+      "level": "nest",
+      "difficulty": "sprout",
+      "operation": "subtract",
+      "left": 8,
+      "right": 3,
+      "answer": 5,
+      "prompt": "窝里有 8 颗恐龙蛋，团团把 3 颗送回暖暖窝。窝里还剩几颗蛋？",
+      "promptText": "小宝，爸爸来读救援任务。窝里有 8 颗恐龙蛋，团团把 3 颗送回暖暖窝。窝里还剩几颗蛋？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先摆好 8 颗恐龙蛋，再轻轻拿走 3 个。留下来的就是 5。",
+      "successText": "答对啦！爸爸看到小宝数得很认真。",
+      "mission": "送回恐龙蛋",
+      "hintType": "egg",
+      "options": [
+        4,
+        5,
+        6
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-sprout-08",
+      "level": "nest",
+      "difficulty": "sprout",
+      "operation": "subtract",
+      "left": 10,
+      "right": 6,
+      "answer": 4,
+      "prompt": "蛋窝里铺了 10 片树叶，小队拿走 6 片去盖小蛋。蛋窝还剩几片树叶？",
+      "promptText": "小宝，爸爸来读救援任务。蛋窝里铺了 10 片树叶，小队拿走 6 片去盖小蛋。蛋窝还剩几片树叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先摆好 10 片树叶，再轻轻拿走 6 个。留下来的就是 4。",
+      "successText": "小宝真厉害！恐龙朋友离安全营地更近啦。",
+      "mission": "整理蛋窝",
+      "hintType": "leaf",
+      "options": [
+        3,
+        4,
+        5
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-helper-01",
+      "level": "nest",
+      "difficulty": "helper",
+      "operation": "add",
+      "left": 8,
+      "right": 5,
+      "answer": 13,
+      "prompt": "暖暖窝里有 8 颗恐龙蛋，爸爸救援队又送回 5 颗。窝里一共有几颗蛋？",
+      "promptText": "小宝，爸爸来读救援任务。暖暖窝里有 8 颗恐龙蛋，爸爸救援队又送回 5 颗。窝里一共有几颗蛋？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。8 差 2 个到十。可以把 5 颗恐龙蛋分成 2 个和 3 个，先凑成十，再加 3，就是 13。",
+      "successText": "小宝答对啦！小恐龙站起来挥挥手，救援队继续前进。",
+      "mission": "保护蛋窝",
+      "hintType": "egg",
+      "options": [
+        12,
+        13,
+        14
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-helper-02",
+      "level": "nest",
+      "difficulty": "helper",
+      "operation": "add",
+      "left": 7,
+      "right": 6,
+      "answer": 13,
+      "prompt": "蛋窝旁边有 7 片软树叶，团团又铺上 6 片。现在有几片树叶？",
+      "promptText": "小宝，爸爸来读救援任务。蛋窝旁边有 7 片软树叶，团团又铺上 6 片。现在有几片树叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。7 差 3 个到十。可以把 6 片树叶分成 3 个和 3 个，先凑成十，再加 3，就是 13。",
+      "successText": "小宝真棒！补给送到了，小恐龙的眼睛亮起来啦。",
+      "mission": "补充嫩叶",
+      "hintType": "leaf",
+      "options": [
+        12,
+        13,
+        14
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-helper-03",
+      "level": "nest",
+      "difficulty": "helper",
+      "operation": "add",
+      "left": 9,
+      "right": 4,
+      "answer": 13,
+      "prompt": "暖暖窝里有 9 颗恐龙蛋，爸爸救援队又送回 4 颗。窝里一共有几颗蛋？",
+      "promptText": "小宝，爸爸来读救援任务。暖暖窝里有 9 颗恐龙蛋，爸爸救援队又送回 4 颗。窝里一共有几颗蛋？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。9 差 1 个到十。可以把 4 颗恐龙蛋分成 1 个和 3 个，先凑成十，再加 3，就是 13。",
+      "successText": "答对啦小宝！恐龙宝宝开心地跳了一下。",
+      "mission": "保护蛋窝",
+      "hintType": "egg",
+      "options": [
+        12,
+        13,
+        14
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-helper-04",
+      "level": "nest",
+      "difficulty": "helper",
+      "operation": "add",
+      "left": 6,
+      "right": 8,
+      "answer": 14,
+      "prompt": "蛋窝旁边有 6 片软树叶，团团又铺上 8 片。现在有几片树叶？",
+      "promptText": "小宝，爸爸来读救援任务。蛋窝旁边有 6 片软树叶，团团又铺上 8 片。现在有几片树叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。6 差 4 个到十。可以把 8 片树叶分成 4 个和 4 个，先凑成十，再加 4，就是 14。",
+      "successText": "小宝救援成功！爸爸给你一颗亮亮星。",
+      "mission": "补充嫩叶",
+      "hintType": "leaf",
+      "options": [
+        13,
+        14,
+        15
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-helper-05",
+      "level": "nest",
+      "difficulty": "helper",
+      "operation": "subtract",
+      "left": 14,
+      "right": 5,
+      "answer": 9,
+      "prompt": "窝里有 14 颗恐龙蛋，团团把 5 颗送回暖暖窝。窝里还剩几颗蛋？",
+      "promptText": "小宝，爸爸来读救援任务。窝里有 14 颗恐龙蛋，团团把 5 颗送回暖暖窝。窝里还剩几颗蛋？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。14 可以看成十和 4。先拿走小尾巴 4 个，还要从十里面再拿 1 个，所以剩 9。",
+      "successText": "太好了小宝！小恐龙有力气跟着队伍走啦。",
+      "mission": "送回恐龙蛋",
+      "hintType": "egg",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-helper-06",
+      "level": "nest",
+      "difficulty": "helper",
+      "operation": "subtract",
+      "left": 13,
+      "right": 6,
+      "answer": 7,
+      "prompt": "蛋窝里铺了 13 片树叶，小队拿走 6 片去盖小蛋。蛋窝还剩几片树叶？",
+      "promptText": "小宝，爸爸来读救援任务。蛋窝里铺了 13 片树叶，小队拿走 6 片去盖小蛋。蛋窝还剩几片树叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。13 可以看成十和 3。先拿走小尾巴 3 个，还要从十里面再拿 3 个，所以剩 7。",
+      "successText": "小宝选对了！救援徽章闪闪发光。",
+      "mission": "整理蛋窝",
+      "hintType": "leaf",
+      "options": [
+        6,
+        7,
+        8
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-helper-07",
+      "level": "nest",
+      "difficulty": "helper",
+      "operation": "subtract",
+      "left": 15,
+      "right": 8,
+      "answer": 7,
+      "prompt": "窝里有 15 颗恐龙蛋，团团把 8 颗送回暖暖窝。窝里还剩几颗蛋？",
+      "promptText": "小宝，爸爸来读救援任务。窝里有 15 颗恐龙蛋，团团把 8 颗送回暖暖窝。窝里还剩几颗蛋？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。15 可以看成十和 5。先拿走小尾巴 5 个，还要从十里面再拿 3 个，所以剩 7。",
+      "successText": "答对啦！爸爸看到小宝数得很认真。",
+      "mission": "送回恐龙蛋",
+      "hintType": "egg",
+      "options": [
+        6,
+        7,
+        8
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-helper-08",
+      "level": "nest",
+      "difficulty": "helper",
+      "operation": "subtract",
+      "left": 12,
+      "right": 7,
+      "answer": 5,
+      "prompt": "蛋窝里铺了 12 片树叶，小队拿走 7 片去盖小蛋。蛋窝还剩几片树叶？",
+      "promptText": "小宝，爸爸来读救援任务。蛋窝里铺了 12 片树叶，小队拿走 7 片去盖小蛋。蛋窝还剩几片树叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。12 可以看成十和 2。先拿走小尾巴 2 个，还要从十里面再拿 5 个，所以剩 5。",
+      "successText": "小宝真厉害！恐龙朋友离安全营地更近啦。",
+      "mission": "整理蛋窝",
+      "hintType": "leaf",
+      "options": [
+        4,
+        5,
+        6
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-hero-01",
+      "level": "nest",
+      "difficulty": "hero",
+      "operation": "add",
+      "left": 9,
+      "right": 8,
+      "answer": 17,
+      "prompt": "暖暖窝里有 9 颗恐龙蛋，爸爸救援队又送回 8 颗。窝里一共有几颗蛋？",
+      "promptText": "小宝，爸爸来读救援任务。暖暖窝里有 9 颗恐龙蛋，爸爸救援队又送回 8 颗。窝里一共有几颗蛋？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。9 差 1 个到十。可以把 8 颗恐龙蛋分成 1 个和 7 个，先凑成十，再加 7，就是 17。",
+      "successText": "小宝答对啦！小恐龙站起来挥挥手，救援队继续前进。",
+      "mission": "保护蛋窝",
+      "hintType": "egg",
+      "options": [
+        16,
+        17,
+        18
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-hero-02",
+      "level": "nest",
+      "difficulty": "hero",
+      "operation": "add",
+      "left": 12,
+      "right": 6,
+      "answer": 18,
+      "prompt": "蛋窝旁边有 12 片软树叶，团团又铺上 6 片。现在有几片树叶？",
+      "promptText": "小宝，爸爸来读救援任务。蛋窝旁边有 12 片软树叶，团团又铺上 6 片。现在有几片树叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。6 差 4 个到十。可以从 12 片树叶里拿 4 个过去，先凑成十，再加 8，就是 18。",
+      "successText": "小宝真棒！补给送到了，小恐龙的眼睛亮起来啦。",
+      "mission": "补充嫩叶",
+      "hintType": "leaf",
+      "options": [
+        17,
+        18,
+        19
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-hero-03",
+      "level": "nest",
+      "difficulty": "hero",
+      "operation": "add",
+      "left": 7,
+      "right": 13,
+      "answer": 20,
+      "prompt": "暖暖窝里有 7 颗恐龙蛋，爸爸救援队又送回 13 颗。窝里一共有几颗蛋？",
+      "promptText": "小宝，爸爸来读救援任务。暖暖窝里有 7 颗恐龙蛋，爸爸救援队又送回 13 颗。窝里一共有几颗蛋？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。7 差 3 个到十。可以把 13 颗恐龙蛋分成 3 个和 10 个，先凑成十，再加 10，就是 20。",
+      "successText": "答对啦小宝！恐龙宝宝开心地跳了一下。",
+      "mission": "保护蛋窝",
+      "hintType": "egg",
+      "options": [
+        18,
+        19,
+        20
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-hero-04",
+      "level": "nest",
+      "difficulty": "hero",
+      "operation": "add",
+      "left": 11,
+      "right": 8,
+      "answer": 19,
+      "prompt": "蛋窝旁边有 11 片软树叶，团团又铺上 8 片。现在有几片树叶？",
+      "promptText": "小宝，爸爸来读救援任务。蛋窝旁边有 11 片软树叶，团团又铺上 8 片。现在有几片树叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。8 差 2 个到十。可以从 11 片树叶里拿 2 个过去，先凑成十，再加 9，就是 19。",
+      "successText": "小宝救援成功！爸爸给你一颗亮亮星。",
+      "mission": "补充嫩叶",
+      "hintType": "leaf",
+      "options": [
+        18,
+        19,
+        20
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-hero-05",
+      "level": "nest",
+      "difficulty": "hero",
+      "operation": "subtract",
+      "left": 20,
+      "right": 7,
+      "answer": 13,
+      "prompt": "窝里有 20 颗恐龙蛋，团团把 7 颗送回暖暖窝。窝里还剩几颗蛋？",
+      "promptText": "小宝，爸爸来读救援任务。窝里有 20 颗恐龙蛋，团团把 7 颗送回暖暖窝。窝里还剩几颗蛋？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。20 可以看成十和 10。先从小尾巴里拿走 7 个，还剩 13。",
+      "successText": "太好了小宝！小恐龙有力气跟着队伍走啦。",
+      "mission": "送回恐龙蛋",
+      "hintType": "egg",
+      "options": [
+        12,
+        13,
+        14
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-hero-06",
+      "level": "nest",
+      "difficulty": "hero",
+      "operation": "subtract",
+      "left": 18,
+      "right": 9,
+      "answer": 9,
+      "prompt": "蛋窝里铺了 18 片树叶，小队拿走 9 片去盖小蛋。蛋窝还剩几片树叶？",
+      "promptText": "小宝，爸爸来读救援任务。蛋窝里铺了 18 片树叶，小队拿走 9 片去盖小蛋。蛋窝还剩几片树叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。18 可以看成十和 8。先拿走小尾巴 8 个，还要从十里面再拿 1 个，所以剩 9。",
+      "successText": "小宝选对了！救援徽章闪闪发光。",
+      "mission": "整理蛋窝",
+      "hintType": "leaf",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-hero-07",
+      "level": "nest",
+      "difficulty": "hero",
+      "operation": "subtract",
+      "left": 16,
+      "right": 8,
+      "answer": 8,
+      "prompt": "窝里有 16 颗恐龙蛋，团团把 8 颗送回暖暖窝。窝里还剩几颗蛋？",
+      "promptText": "小宝，爸爸来读救援任务。窝里有 16 颗恐龙蛋，团团把 8 颗送回暖暖窝。窝里还剩几颗蛋？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。16 可以看成十和 6。先拿走小尾巴 6 个，还要从十里面再拿 2 个，所以剩 8。",
+      "successText": "答对啦！爸爸看到小宝数得很认真。",
+      "mission": "送回恐龙蛋",
+      "hintType": "egg",
+      "options": [
+        7,
+        8,
+        9
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "nest-hero-08",
+      "level": "nest",
+      "difficulty": "hero",
+      "operation": "subtract",
+      "left": 15,
+      "right": 6,
+      "answer": 9,
+      "prompt": "蛋窝里铺了 15 片树叶，小队拿走 6 片去盖小蛋。蛋窝还剩几片树叶？",
+      "promptText": "小宝，爸爸来读救援任务。蛋窝里铺了 15 片树叶，小队拿走 6 片去盖小蛋。蛋窝还剩几片树叶？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。15 可以看成十和 5。先拿走小尾巴 5 个，还要从十里面再拿 1 个，所以剩 9。",
+      "successText": "小宝真厉害！恐龙朋友离安全营地更近啦。",
+      "mission": "整理蛋窝",
+      "hintType": "leaf",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-sprout-01",
+      "level": "river",
+      "difficulty": "sprout",
+      "operation": "add",
+      "left": 2,
+      "right": 3,
+      "answer": 5,
+      "prompt": "小橙的篮子里有 2 个果子，长脖又摘来 3 个。篮子里现在有几个果子？",
+      "promptText": "小宝，爸爸来读救援任务。小橙的篮子里有 2 个果子，长脖又摘来 3 个。篮子里现在有几个果子？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先看 2 个果子，再接着数 3 个。每五个放一小堆，数起来更清楚，答案就是 5。",
+      "successText": "小宝答对啦！小恐龙站起来挥挥手，救援队继续前进。",
+      "mission": "装满水果篮",
+      "hintType": "fruit",
+      "options": [
+        4,
+        5,
+        6
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-sprout-02",
+      "level": "river",
+      "difficulty": "sprout",
+      "operation": "add",
+      "left": 4,
+      "right": 5,
+      "answer": 9,
+      "prompt": "河边沙地有 4 个脚印，石头后面又发现 5 个。小队一共找到几个脚印？",
+      "promptText": "小宝，爸爸来读救援任务。河边沙地有 4 个脚印，石头后面又发现 5 个。小队一共找到几个脚印？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先看 4 个脚印，再接着数 5 个。每五个放一小堆，数起来更清楚，答案就是 9。",
+      "successText": "小宝真棒！补给送到了，小恐龙的眼睛亮起来啦。",
+      "mission": "河边找脚印",
+      "hintType": "footprint",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-sprout-03",
+      "level": "river",
+      "difficulty": "sprout",
+      "operation": "add",
+      "left": 6,
+      "right": 3,
+      "answer": 9,
+      "prompt": "小橙的篮子里有 6 个果子，长脖又摘来 3 个。篮子里现在有几个果子？",
+      "promptText": "小宝，爸爸来读救援任务。小橙的篮子里有 6 个果子，长脖又摘来 3 个。篮子里现在有几个果子？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先看 6 个果子，再接着数 3 个。每五个放一小堆，数起来更清楚，答案就是 9。",
+      "successText": "答对啦小宝！恐龙宝宝开心地跳了一下。",
+      "mission": "装满水果篮",
+      "hintType": "fruit",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-sprout-04",
+      "level": "river",
+      "difficulty": "sprout",
+      "operation": "add",
+      "left": 1,
+      "right": 8,
+      "answer": 9,
+      "prompt": "河边沙地有 1 个脚印，石头后面又发现 8 个。小队一共找到几个脚印？",
+      "promptText": "小宝，爸爸来读救援任务。河边沙地有 1 个脚印，石头后面又发现 8 个。小队一共找到几个脚印？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先看 1 个脚印，再接着数 8 个。每五个放一小堆，数起来更清楚，答案就是 9。",
+      "successText": "小宝救援成功！爸爸给你一颗亮亮星。",
+      "mission": "河边找脚印",
+      "hintType": "footprint",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-sprout-05",
+      "level": "river",
+      "difficulty": "sprout",
+      "operation": "add",
+      "left": 7,
+      "right": 2,
+      "answer": 9,
+      "prompt": "小橙的篮子里有 7 个果子，长脖又摘来 2 个。篮子里现在有几个果子？",
+      "promptText": "小宝，爸爸来读救援任务。小橙的篮子里有 7 个果子，长脖又摘来 2 个。篮子里现在有几个果子？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先看 7 个果子，再接着数 2 个。每五个放一小堆，数起来更清楚，答案就是 9。",
+      "successText": "太好了小宝！小恐龙有力气跟着队伍走啦。",
+      "mission": "装满水果篮",
+      "hintType": "fruit",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-sprout-06",
+      "level": "river",
+      "difficulty": "sprout",
+      "operation": "subtract",
+      "left": 9,
+      "right": 4,
+      "answer": 5,
+      "prompt": "河边补给站有 9 个果子，送给小恐龙 4 个。补给站还剩几个果子？",
+      "promptText": "小宝，爸爸来读救援任务。河边补给站有 9 个果子，送给小恐龙 4 个。补给站还剩几个果子？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先摆好 9 个果子，再轻轻拿走 4 个。留下来的就是 5。",
+      "successText": "小宝选对了！救援徽章闪闪发光。",
+      "mission": "分水果",
+      "hintType": "fruit",
+      "options": [
+        4,
+        5,
+        6
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-sprout-07",
+      "level": "river",
+      "difficulty": "sprout",
+      "operation": "subtract",
+      "left": 8,
+      "right": 3,
+      "answer": 5,
+      "prompt": "救援篮里有 8 个果子，小队吃掉 3 个。篮子里还剩几个果子？",
+      "promptText": "小宝，爸爸来读救援任务。救援篮里有 8 个果子，小队吃掉 3 个。篮子里还剩几个果子？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先摆好 8 个果子，再轻轻拿走 3 个。留下来的就是 5。",
+      "successText": "答对啦！爸爸看到小宝数得很认真。",
+      "mission": "整理补给",
+      "hintType": "fruit",
+      "options": [
+        4,
+        5,
+        6
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-sprout-08",
+      "level": "river",
+      "difficulty": "sprout",
+      "operation": "subtract",
+      "left": 10,
+      "right": 6,
+      "answer": 4,
+      "prompt": "河边补给站有 10 个果子，送给小恐龙 6 个。补给站还剩几个果子？",
+      "promptText": "小宝，爸爸来读救援任务。河边补给站有 10 个果子，送给小恐龙 6 个。补给站还剩几个果子？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。先摆好 10 个果子，再轻轻拿走 6 个。留下来的就是 4。",
+      "successText": "小宝真厉害！恐龙朋友离安全营地更近啦。",
+      "mission": "分水果",
+      "hintType": "fruit",
+      "options": [
+        3,
+        4,
+        5
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-helper-01",
+      "level": "river",
+      "difficulty": "helper",
+      "operation": "add",
+      "left": 8,
+      "right": 5,
+      "answer": 13,
+      "prompt": "小橙的篮子里有 8 个果子，长脖又摘来 5 个。篮子里现在有几个果子？",
+      "promptText": "小宝，爸爸来读救援任务。小橙的篮子里有 8 个果子，长脖又摘来 5 个。篮子里现在有几个果子？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。8 差 2 个到十。可以把 5 个果子分成 2 个和 3 个，先凑成十，再加 3，就是 13。",
+      "successText": "小宝答对啦！小恐龙站起来挥挥手，救援队继续前进。",
+      "mission": "装满水果篮",
+      "hintType": "fruit",
+      "options": [
+        12,
+        13,
+        14
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-helper-02",
+      "level": "river",
+      "difficulty": "helper",
+      "operation": "add",
+      "left": 7,
+      "right": 6,
+      "answer": 13,
+      "prompt": "河边沙地有 7 个脚印，石头后面又发现 6 个。小队一共找到几个脚印？",
+      "promptText": "小宝，爸爸来读救援任务。河边沙地有 7 个脚印，石头后面又发现 6 个。小队一共找到几个脚印？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。7 差 3 个到十。可以把 6 个脚印分成 3 个和 3 个，先凑成十，再加 3，就是 13。",
+      "successText": "小宝真棒！补给送到了，小恐龙的眼睛亮起来啦。",
+      "mission": "河边找脚印",
+      "hintType": "footprint",
+      "options": [
+        12,
+        13,
+        14
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-helper-03",
+      "level": "river",
+      "difficulty": "helper",
+      "operation": "add",
+      "left": 9,
+      "right": 4,
+      "answer": 13,
+      "prompt": "小橙的篮子里有 9 个果子，长脖又摘来 4 个。篮子里现在有几个果子？",
+      "promptText": "小宝，爸爸来读救援任务。小橙的篮子里有 9 个果子，长脖又摘来 4 个。篮子里现在有几个果子？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。9 差 1 个到十。可以把 4 个果子分成 1 个和 3 个，先凑成十，再加 3，就是 13。",
+      "successText": "答对啦小宝！恐龙宝宝开心地跳了一下。",
+      "mission": "装满水果篮",
+      "hintType": "fruit",
+      "options": [
+        12,
+        13,
+        14
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-helper-04",
+      "level": "river",
+      "difficulty": "helper",
+      "operation": "add",
+      "left": 6,
+      "right": 8,
+      "answer": 14,
+      "prompt": "河边沙地有 6 个脚印，石头后面又发现 8 个。小队一共找到几个脚印？",
+      "promptText": "小宝，爸爸来读救援任务。河边沙地有 6 个脚印，石头后面又发现 8 个。小队一共找到几个脚印？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。6 差 4 个到十。可以把 8 个脚印分成 4 个和 4 个，先凑成十，再加 4，就是 14。",
+      "successText": "小宝救援成功！爸爸给你一颗亮亮星。",
+      "mission": "河边找脚印",
+      "hintType": "footprint",
+      "options": [
+        13,
+        14,
+        15
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-helper-05",
+      "level": "river",
+      "difficulty": "helper",
+      "operation": "subtract",
+      "left": 14,
+      "right": 5,
+      "answer": 9,
+      "prompt": "救援篮里有 14 个果子，小队吃掉 5 个。篮子里还剩几个果子？",
+      "promptText": "小宝，爸爸来读救援任务。救援篮里有 14 个果子，小队吃掉 5 个。篮子里还剩几个果子？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。14 可以看成十和 4。先拿走小尾巴 4 个，还要从十里面再拿 1 个，所以剩 9。",
+      "successText": "太好了小宝！小恐龙有力气跟着队伍走啦。",
+      "mission": "整理补给",
+      "hintType": "fruit",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-helper-06",
+      "level": "river",
+      "difficulty": "helper",
+      "operation": "subtract",
+      "left": 13,
+      "right": 6,
+      "answer": 7,
+      "prompt": "河边补给站有 13 个果子，送给小恐龙 6 个。补给站还剩几个果子？",
+      "promptText": "小宝，爸爸来读救援任务。河边补给站有 13 个果子，送给小恐龙 6 个。补给站还剩几个果子？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。13 可以看成十和 3。先拿走小尾巴 3 个，还要从十里面再拿 3 个，所以剩 7。",
+      "successText": "小宝选对了！救援徽章闪闪发光。",
+      "mission": "分水果",
+      "hintType": "fruit",
+      "options": [
+        6,
+        7,
+        8
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-helper-07",
+      "level": "river",
+      "difficulty": "helper",
+      "operation": "subtract",
+      "left": 15,
+      "right": 8,
+      "answer": 7,
+      "prompt": "救援篮里有 15 个果子，小队吃掉 8 个。篮子里还剩几个果子？",
+      "promptText": "小宝，爸爸来读救援任务。救援篮里有 15 个果子，小队吃掉 8 个。篮子里还剩几个果子？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。15 可以看成十和 5。先拿走小尾巴 5 个，还要从十里面再拿 3 个，所以剩 7。",
+      "successText": "答对啦！爸爸看到小宝数得很认真。",
+      "mission": "整理补给",
+      "hintType": "fruit",
+      "options": [
+        6,
+        7,
+        8
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-helper-08",
+      "level": "river",
+      "difficulty": "helper",
+      "operation": "subtract",
+      "left": 12,
+      "right": 7,
+      "answer": 5,
+      "prompt": "河边补给站有 12 个果子，送给小恐龙 7 个。补给站还剩几个果子？",
+      "promptText": "小宝，爸爸来读救援任务。河边补给站有 12 个果子，送给小恐龙 7 个。补给站还剩几个果子？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。12 可以看成十和 2。先拿走小尾巴 2 个，还要从十里面再拿 5 个，所以剩 5。",
+      "successText": "小宝真厉害！恐龙朋友离安全营地更近啦。",
+      "mission": "分水果",
+      "hintType": "fruit",
+      "options": [
+        4,
+        5,
+        6
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-hero-01",
+      "level": "river",
+      "difficulty": "hero",
+      "operation": "add",
+      "left": 9,
+      "right": 8,
+      "answer": 17,
+      "prompt": "小橙的篮子里有 9 个果子，长脖又摘来 8 个。篮子里现在有几个果子？",
+      "promptText": "小宝，爸爸来读救援任务。小橙的篮子里有 9 个果子，长脖又摘来 8 个。篮子里现在有几个果子？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。9 差 1 个到十。可以把 8 个果子分成 1 个和 7 个，先凑成十，再加 7，就是 17。",
+      "successText": "小宝答对啦！小恐龙站起来挥挥手，救援队继续前进。",
+      "mission": "装满水果篮",
+      "hintType": "fruit",
+      "options": [
+        16,
+        17,
+        18
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-hero-02",
+      "level": "river",
+      "difficulty": "hero",
+      "operation": "add",
+      "left": 12,
+      "right": 6,
+      "answer": 18,
+      "prompt": "河边沙地有 12 个脚印，石头后面又发现 6 个。小队一共找到几个脚印？",
+      "promptText": "小宝，爸爸来读救援任务。河边沙地有 12 个脚印，石头后面又发现 6 个。小队一共找到几个脚印？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。6 差 4 个到十。可以从 12 个脚印里拿 4 个过去，先凑成十，再加 8，就是 18。",
+      "successText": "小宝真棒！补给送到了，小恐龙的眼睛亮起来啦。",
+      "mission": "河边找脚印",
+      "hintType": "footprint",
+      "options": [
+        17,
+        18,
+        19
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-hero-03",
+      "level": "river",
+      "difficulty": "hero",
+      "operation": "add",
+      "left": 7,
+      "right": 13,
+      "answer": 20,
+      "prompt": "小橙的篮子里有 7 个果子，长脖又摘来 13 个。篮子里现在有几个果子？",
+      "promptText": "小宝，爸爸来读救援任务。小橙的篮子里有 7 个果子，长脖又摘来 13 个。篮子里现在有几个果子？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。7 差 3 个到十。可以把 13 个果子分成 3 个和 10 个，先凑成十，再加 10，就是 20。",
+      "successText": "答对啦小宝！恐龙宝宝开心地跳了一下。",
+      "mission": "装满水果篮",
+      "hintType": "fruit",
+      "options": [
+        18,
+        19,
+        20
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-hero-04",
+      "level": "river",
+      "difficulty": "hero",
+      "operation": "add",
+      "left": 11,
+      "right": 8,
+      "answer": 19,
+      "prompt": "河边沙地有 11 个脚印，石头后面又发现 8 个。小队一共找到几个脚印？",
+      "promptText": "小宝，爸爸来读救援任务。河边沙地有 11 个脚印，石头后面又发现 8 个。小队一共找到几个脚印？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。8 差 2 个到十。可以从 11 个脚印里拿 2 个过去，先凑成十，再加 9，就是 19。",
+      "successText": "小宝救援成功！爸爸给你一颗亮亮星。",
+      "mission": "河边找脚印",
+      "hintType": "footprint",
+      "options": [
+        18,
+        19,
+        20
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-hero-05",
+      "level": "river",
+      "difficulty": "hero",
+      "operation": "subtract",
+      "left": 20,
+      "right": 7,
+      "answer": 13,
+      "prompt": "救援篮里有 20 个果子，小队吃掉 7 个。篮子里还剩几个果子？",
+      "promptText": "小宝，爸爸来读救援任务。救援篮里有 20 个果子，小队吃掉 7 个。篮子里还剩几个果子？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。20 可以看成十和 10。先从小尾巴里拿走 7 个，还剩 13。",
+      "successText": "太好了小宝！小恐龙有力气跟着队伍走啦。",
+      "mission": "整理补给",
+      "hintType": "fruit",
+      "options": [
+        12,
+        13,
+        14
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-hero-06",
+      "level": "river",
+      "difficulty": "hero",
+      "operation": "subtract",
+      "left": 18,
+      "right": 9,
+      "answer": 9,
+      "prompt": "河边补给站有 18 个果子，送给小恐龙 9 个。补给站还剩几个果子？",
+      "promptText": "小宝，爸爸来读救援任务。河边补给站有 18 个果子，送给小恐龙 9 个。补给站还剩几个果子？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。18 可以看成十和 8。先拿走小尾巴 8 个，还要从十里面再拿 1 个，所以剩 9。",
+      "successText": "小宝选对了！救援徽章闪闪发光。",
+      "mission": "分水果",
+      "hintType": "fruit",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-hero-07",
+      "level": "river",
+      "difficulty": "hero",
+      "operation": "subtract",
+      "left": 16,
+      "right": 8,
+      "answer": 8,
+      "prompt": "救援篮里有 16 个果子，小队吃掉 8 个。篮子里还剩几个果子？",
+      "promptText": "小宝，爸爸来读救援任务。救援篮里有 16 个果子，小队吃掉 8 个。篮子里还剩几个果子？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。16 可以看成十和 6。先拿走小尾巴 6 个，还要从十里面再拿 2 个，所以剩 8。",
+      "successText": "答对啦！爸爸看到小宝数得很认真。",
+      "mission": "整理补给",
+      "hintType": "fruit",
+      "options": [
+        7,
+        8,
+        9
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    },
+    {
+      "id": "river-hero-08",
+      "level": "river",
+      "difficulty": "hero",
+      "operation": "subtract",
+      "left": 15,
+      "right": 6,
+      "answer": 9,
+      "prompt": "河边补给站有 15 个果子，送给小恐龙 6 个。补给站还剩几个果子？",
+      "promptText": "小宝，爸爸来读救援任务。河边补给站有 15 个果子，送给小恐龙 6 个。补给站还剩几个果子？ 你来选一个数字吧。",
+      "dadHintText": "小宝，爸爸陪你慢慢看。15 可以看成十和 5。先拿走小尾巴 5 个，还要从十里面再拿 1 个，所以剩 9。",
+      "successText": "小宝真厉害！恐龙朋友离安全营地更近啦。",
+      "mission": "分水果",
+      "hintType": "fruit",
+      "options": [
+        8,
+        9,
+        10
+      ],
+      "audio": {
+        "read": null,
+        "hint": null,
+        "success": null
+      }
+    }
+  ]
+}

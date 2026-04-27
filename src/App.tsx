@@ -204,8 +204,21 @@ const speakText = async (text: string) => {
   }
 };
 
-const makeQuestionSpeech = (question: Question) =>
-  `${CHILD_NAME}，听听救援任务。${question.prompt} 你觉得是哪个数字呢？`;
+const publicAssetUrl = (path: string | null | undefined) => {
+  if (!path) return null;
+  return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+};
+
+const preloadVoiceClip = (path: string | null | undefined) => {
+  const url = publicAssetUrl(path);
+  if (!url) return;
+
+  const audio = new Audio(url);
+  audio.preload = "auto";
+  audio.load();
+};
+
+const makeQuestionSpeech = (question: Question) => question.promptText;
 
 const makeTenHint = (question: Question, itemName: string) => {
   if (question.operation === "add") {
@@ -238,6 +251,8 @@ const makeTenHint = (question: Question, itemName: string) => {
 };
 
 const makeAiHint = (question: Question) => {
+  if (question.dadHintText) return question.dadHintText;
+
   const itemName =
     question.hintType === "leaf"
       ? "树叶"
@@ -253,6 +268,9 @@ const makeAiHint = (question: Question) => {
 
   return `${CHILD_NAME}，爸爸提示来啦。先放好 ${question.left} 个${itemName}，再拿走 ${question.right} 个。${makeTenHint(question, itemName)}`;
 };
+
+const makeSuccessSpeech = (question: Question) =>
+  question.successText || `${CHILD_NAME}答对啦！小恐龙有力气了。`;
 
 const storyTokenPattern =
   /(\d+|先找到|又送来|又摘来|现在有|一共有|一共看见|发现|又有|送回|还剩|分给|吃掉|找到|摘来|看见|剩下)/g;
@@ -298,6 +316,7 @@ function App() {
   const [speechReady, setSpeechReady] = useState(false);
   const [musicOn, setMusicOn] = useState(false);
   const audioRef = useRef<AudioContext | null>(null);
+  const voiceAudioRef = useRef<HTMLAudioElement | null>(null);
   const nextTimer = useRef<number | null>(null);
   const musicTimer = useRef<number | null>(null);
   const musicStep = useRef(0);
@@ -319,6 +338,7 @@ function App() {
     return () => {
       if (nextTimer.current) window.clearTimeout(nextTimer.current);
       if (musicTimer.current) window.clearInterval(musicTimer.current);
+      if (voiceAudioRef.current) voiceAudioRef.current.pause();
       if ("speechSynthesis" in window) window.speechSynthesis.cancel();
     };
   }, []);
@@ -355,11 +375,18 @@ function App() {
     if (!speechReady || screen !== "play") return;
 
     const readTimer = window.setTimeout(() => {
-      speakText(makeQuestionSpeech(currentQuestion));
+      playVoiceClip(currentQuestion.audio.read, makeQuestionSpeech(currentQuestion));
     }, 240);
 
     return () => window.clearTimeout(readTimer);
   }, [currentQuestion, screen, speechReady]);
+
+  useEffect(() => {
+    if (screen !== "play") return;
+
+    preloadVoiceClip(currentQuestion.audio.read);
+    preloadVoiceClip(questions[questionIndex + 1]?.audio.read);
+  }, [currentQuestion, questionIndex, questions, screen]);
 
   const ensureAudio = () => {
     if (!audioRef.current) {
@@ -369,6 +396,50 @@ function App() {
       void audioRef.current.resume();
     }
     return audioRef.current;
+  };
+
+  const stopVoiceAudio = () => {
+    if (!voiceAudioRef.current) return;
+    voiceAudioRef.current.pause();
+    voiceAudioRef.current.currentTime = 0;
+    voiceAudioRef.current = null;
+  };
+
+  const playVoiceClip = async (
+    clipPath: string | null | undefined,
+    fallbackText: string,
+  ) => {
+    ensureAudio();
+    stopVoiceAudio();
+    if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+
+    const url = publicAssetUrl(clipPath);
+    if (!url) {
+      await speakText(fallbackText);
+      return;
+    }
+
+    const audio = new Audio(url);
+    audio.preload = "auto";
+    audio.volume = 1;
+    let didFallback = false;
+    const fallback = () => {
+      if (didFallback) return;
+      didFallback = true;
+      if (voiceAudioRef.current === audio) voiceAudioRef.current = null;
+      void speakText(fallbackText);
+    };
+    audio.onended = () => {
+      if (voiceAudioRef.current === audio) voiceAudioRef.current = null;
+    };
+    audio.onerror = fallback;
+    voiceAudioRef.current = audio;
+
+    try {
+      await audio.play();
+    } catch {
+      fallback();
+    }
   };
 
   const playCorrect = () => {
@@ -407,7 +478,11 @@ function App() {
       playCorrect();
       if (speechReady) {
         window.setTimeout(
-          () => speakText(`${CHILD_NAME}答对啦！小恐龙有力气了。`),
+          () =>
+            void playVoiceClip(
+              currentQuestion.audio.success,
+              makeSuccessSpeech(currentQuestion),
+            ),
           260,
         );
       }
@@ -419,14 +494,17 @@ function App() {
         } else {
           setQuestionIndex((index) => index + 1);
         }
-      }, 1000);
+      }, 1900);
       return;
     }
 
     setFeedback("try");
     playTryAgain();
     if (speechReady) {
-      window.setTimeout(() => speakText(makeAiHint(currentQuestion)), 220);
+      window.setTimeout(
+        () => void playVoiceClip(currentQuestion.audio.hint, makeAiHint(currentQuestion)),
+        220,
+      );
     }
   };
 
@@ -457,14 +535,14 @@ function App() {
   const readQuestion = () => {
     ensureAudio();
     setSpeechReady(true);
-    speakText(makeQuestionSpeech(currentQuestion));
+    void playVoiceClip(currentQuestion.audio.read, makeQuestionSpeech(currentQuestion));
   };
 
   const askAi = () => {
     ensureAudio();
     setSpeechReady(true);
     setFeedback("try");
-    speakText(makeAiHint(currentQuestion));
+    void playVoiceClip(currentQuestion.audio.hint, makeAiHint(currentQuestion));
   };
 
   return (
@@ -643,7 +721,7 @@ function StartScreen({
         <div className="start-copy">
           <span className="mission-chip">小宝专属</span>
           <h1>恐龙救援队</h1>
-          <p>选关卡，选难度，出发救恐龙。</p>
+          <p>AI爸爸语音陪小宝，选关卡，出发救恐龙。</p>
         </div>
         <div className="start-dinos" aria-hidden="true">
           {dinos.slice(0, 3).map((dino, index) => (
@@ -942,7 +1020,7 @@ function RescueDinoStatus({
         <div className="rescue-meter" aria-label={`救援进度 ${rescuePercent}%`}>
           <span style={{ width: `${rescuePercent}%` }} />
         </div>
-        <small>{speechReady ? "爸爸正在陪小宝" : "点读题开始出声"}</small>
+        <small>{speechReady ? "AI爸爸正在陪小宝" : "点读题开始出声"}</small>
       </div>
     </section>
   );
@@ -1002,10 +1080,10 @@ function RewardTray({ feedback, hintType }: RewardTrayProps) {
         {feedback === "idle" && <strong>{CHILD_NAME}选数字救恐龙</strong>}
         <p>
           {feedback === "correct"
-            ? "小恐龙开心地跳起来。"
+            ? "AI爸爸会鼓励小宝。"
             : feedback === "try"
-              ? "爸爸会读提示。"
-              : "点读题，游戏会说话。"}
+              ? "AI爸爸会读提示。"
+              : "点读题，AI爸爸会说话。"}
         </p>
       </div>
       <Volume2 size={24} />

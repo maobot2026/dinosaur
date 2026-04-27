@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "generate:ai-content": "node scripts/generate-ai-content.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
