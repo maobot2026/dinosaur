@@ -1,12 +1,12 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { type CSSProperties, useEffect, useMemo, useRef, useState } from "react";
 import {
   Baby,
-  Bot,
   BookOpen,
   Check,
   Heart,
   Home,
   Music2,
+  Radio,
   RotateCcw,
   Sparkles,
   Volume2,
@@ -27,6 +27,7 @@ import {
   HintType,
   Question,
   RescueLevel,
+  SceneRewardId,
   dinos,
   makeRound,
   pickUnlockedDino,
@@ -34,6 +35,7 @@ import {
 
 type Screen = "start" | "play" | "summary" | "dex";
 type Feedback = "idle" | "correct" | "try";
+type HelperMood = "idle" | "reading" | "cheer" | "thinking" | "radio";
 
 const STORAGE_KEY = "dino-rescue-math-save";
 const CHILD_NAME = "小宝";
@@ -59,6 +61,30 @@ const difficultyOptions: Array<{
   { id: "hero", title: "勇敢", text: "20以内" },
 ];
 
+const sceneRewards: Record<
+  SceneRewardId,
+  { title: string; text: string; level: RescueLevel; marks: string[] }
+> = {
+  bridge: {
+    title: "山谷小桥",
+    text: "小宝修好桥，恐龙能回营地。",
+    level: "valley",
+    marks: ["桥墩", "桥板", "护栏", "旗子", "通路"],
+  },
+  nest: {
+    title: "暖暖蛋窝",
+    text: "小宝铺好窝，恐龙蛋暖起来。",
+    level: "nest",
+    marks: ["草垫", "蛋灯", "围栏", "小花", "暖窝"],
+  },
+  supply: {
+    title: "河边补给车",
+    text: "小宝装满车，救援队有力气。",
+    level: "river",
+    marks: ["车轮", "果篮", "水壶", "徽章", "出发"],
+  },
+};
+
 const dinoImages: Record<string, string> = {
   rex: dinoRexUrl,
   trike: dinoTrikeUrl,
@@ -74,14 +100,18 @@ const itemImages: Record<HintType, string> = {
   leaf: itemLeafUrl,
 };
 
+const helperDino = dinos.find((dino) => dino.id === "raptor") ?? dinos[0];
+
 type SaveData = {
   unlockedIds: string[];
+  baseRewardIds: SceneRewardId[];
   bestScore: number;
   roundsPlayed: number;
 };
 
 const defaultSave: SaveData = {
   unlockedIds: [],
+  baseRewardIds: [],
   bestScore: 0,
   roundsPlayed: 0,
 };
@@ -121,9 +151,17 @@ const playMusicNote = (
   frequency: number,
   start: number,
   duration: number,
+  volumeScale = 1,
 ) => {
-  tone(audioContext, frequency, start, duration, "sine", 0.024);
-  tone(audioContext, frequency * 2, start + 0.01, duration * 0.8, "triangle", 0.01);
+  tone(audioContext, frequency, start, duration, "sine", 0.024 * volumeScale);
+  tone(
+    audioContext,
+    frequency * 2,
+    start + 0.01,
+    duration * 0.8,
+    "triangle",
+    0.01 * volumeScale,
+  );
 };
 
 const preferredVoiceNames = [
@@ -262,11 +300,39 @@ const makeAiHint = (question: Question) => {
           ? "果子"
           : "脚印";
 
-  if (question.operation === "add") {
-    return `${CHILD_NAME}，爸爸提示来啦。先数 ${question.left} 个${itemName}，停一下，再接着数 ${question.right} 个。${makeTenHint(question, itemName)}`;
+  if (question.strategyType === "count-on") {
+    const big = Math.max(question.left, question.right);
+    const small = Math.min(question.left, question.right);
+    return `${CHILD_NAME}，爸爸提示来啦。先记住大的 ${big}，小恐龙往后跳 ${small} 下，跳到 ${question.answer}。`;
   }
 
-  return `${CHILD_NAME}，爸爸提示来啦。先放好 ${question.left} 个${itemName}，再拿走 ${question.right} 个。${makeTenHint(question, itemName)}`;
+  if (question.strategyType === "make-ten") {
+    const big = Math.max(question.left, question.right);
+    const small = Math.min(question.left, question.right);
+    const need = 10 - big;
+    const rest = small - need;
+    return `${CHILD_NAME}，爸爸提示来啦。${big} 还差 ${need} 到 10，从 ${small} 个${itemName}里拿 ${need} 个过来，先变成 10，再加 ${rest}，就是 ${question.answer}。`;
+  }
+
+  if (question.strategyType === "break-ten") {
+    const ones = question.left - 10;
+    if (question.left === 20) {
+      return `${CHILD_NAME}，爸爸提示来啦。20 是两个 10，先从一个 10 里拿走 ${question.right} 个，还剩 ${10 - question.right} 个，再加另一个 10，就是 ${question.answer}。`;
+    }
+    if (question.right <= ones) {
+      return `${CHILD_NAME}，爸爸提示来啦。${question.left} 是 10 和 ${ones}，先从小尾巴里拿走 ${question.right} 个，剩下 ${question.answer}。`;
+    }
+    const fromTen = question.right - ones;
+    return `${CHILD_NAME}，爸爸提示来啦。${question.left} 是 10 和 ${ones}，先拿走 ${ones} 个，还要从 10 里拿 ${fromTen} 个，剩下 ${question.answer}。`;
+  }
+
+  if (question.strategyType === "part-whole") {
+    return question.operation === "add"
+      ? `${CHILD_NAME}，爸爸提示来啦。${question.left} 个${itemName}是一部分，${question.right} 个是另一部分，两部分合起来就是 ${question.answer}。`
+      : `${CHILD_NAME}，爸爸提示来啦。${question.left} 个${itemName}是整体，拿走 ${question.right} 个，留下来的部分就是 ${question.answer}。`;
+  }
+
+  return `${CHILD_NAME}，爸爸提示来啦。我们一个一个点亮数，数到最后一个，就是 ${question.answer}。`;
 };
 
 const makeSuccessSpeech = (question: Question) =>
@@ -315,8 +381,10 @@ function App() {
   const [roundReward, setRoundReward] = useState<Dino | null>(null);
   const [speechReady, setSpeechReady] = useState(false);
   const [musicOn, setMusicOn] = useState(false);
+  const [wrongAttempts, setWrongAttempts] = useState(0);
   const audioRef = useRef<AudioContext | null>(null);
   const voiceAudioRef = useRef<HTMLAudioElement | null>(null);
+  const musicDuckedRef = useRef(false);
   const nextTimer = useRef<number | null>(null);
   const musicTimer = useRef<number | null>(null);
   const musicStep = useRef(0);
@@ -324,10 +392,16 @@ function App() {
   const currentQuestion = questions[questionIndex];
   const progress = questionIndex + 1;
   const isLastQuestion = questionIndex === questions.length - 1;
+  const currentSceneReward = sceneRewards[currentQuestion.sceneRewardId];
 
   const unlockedDinos = useMemo(
     () => dinos.filter((dino) => saveData.unlockedIds.includes(dino.id)),
     [saveData.unlockedIds],
+  );
+
+  const baseRewards = useMemo(
+    () => (saveData.baseRewardIds ?? []).map((id) => sceneRewards[id]).filter(Boolean),
+    [saveData.baseRewardIds],
   );
 
   useEffect(() => {
@@ -355,9 +429,10 @@ function App() {
 
     const playBar = () => {
       const now = ctx.currentTime;
+      const volumeScale = musicDuckedRef.current ? 0.34 : 1;
       for (let i = 0; i < 4; i += 1) {
         const note = melody[(musicStep.current + i) % melody.length];
-        playMusicNote(ctx, note, now + i * 0.42, 0.24);
+        playMusicNote(ctx, note, now + i * 0.42, 0.24, volumeScale);
       }
       musicStep.current = (musicStep.current + 4) % melody.length;
     };
@@ -403,6 +478,7 @@ function App() {
     voiceAudioRef.current.pause();
     voiceAudioRef.current.currentTime = 0;
     voiceAudioRef.current = null;
+    musicDuckedRef.current = false;
   };
 
   const playVoiceClip = async (
@@ -422,15 +498,18 @@ function App() {
     const audio = new Audio(url);
     audio.preload = "auto";
     audio.volume = 1;
+    musicDuckedRef.current = true;
     let didFallback = false;
     const fallback = () => {
       if (didFallback) return;
       didFallback = true;
       if (voiceAudioRef.current === audio) voiceAudioRef.current = null;
+      musicDuckedRef.current = false;
       void speakText(fallbackText);
     };
     audio.onended = () => {
       if (voiceAudioRef.current === audio) voiceAudioRef.current = null;
+      musicDuckedRef.current = false;
     };
     audio.onerror = fallback;
     voiceAudioRef.current = audio;
@@ -461,6 +540,9 @@ function App() {
     const reward = pickUnlockedDino(saveData.roundsPlayed, saveData.unlockedIds);
     setRoundReward(reward);
     setSaveData((current) => ({
+      baseRewardIds: Array.from(
+        new Set([...(current.baseRewardIds ?? []), currentQuestion.sceneRewardId]),
+      ),
       unlockedIds: Array.from(new Set([...current.unlockedIds, reward.id])),
       bestScore: Math.max(current.bestScore, nextScore),
       roundsPlayed: current.roundsPlayed + 1,
@@ -489,6 +571,7 @@ function App() {
 
       nextTimer.current = window.setTimeout(() => {
         setFeedback("idle");
+        setWrongAttempts(0);
         if (isLastQuestion) {
           finishRound(nextScore);
         } else {
@@ -499,8 +582,10 @@ function App() {
     }
 
     setFeedback("try");
+    const nextWrongAttempts = wrongAttempts + 1;
+    setWrongAttempts(nextWrongAttempts);
     playTryAgain();
-    if (speechReady) {
+    if (speechReady && nextWrongAttempts >= 2) {
       window.setTimeout(
         () => void playVoiceClip(currentQuestion.audio.hint, makeAiHint(currentQuestion)),
         220,
@@ -522,6 +607,7 @@ function App() {
     setQuestionIndex(0);
     setScore(0);
     setFeedback("idle");
+    setWrongAttempts(0);
     setRoundReward(null);
     setScreen("play");
     resetPageScroll();
@@ -542,6 +628,7 @@ function App() {
     ensureAudio();
     setSpeechReady(true);
     setFeedback("try");
+    setWrongAttempts((current) => Math.max(2, current));
     void playVoiceClip(currentQuestion.audio.hint, makeAiHint(currentQuestion));
   };
 
@@ -579,6 +666,7 @@ function App() {
             difficulty={selectedDifficulty}
             bestScore={saveData.bestScore}
             unlockedCount={saveData.unlockedIds.length}
+            baseRewards={baseRewards}
             musicOn={musicOn}
             onLevel={setSelectedLevel}
             onDifficulty={setSelectedDifficulty}
@@ -599,6 +687,7 @@ function App() {
             total={questions.length}
             score={score}
             feedback={feedback}
+            wrongAttempts={wrongAttempts}
             speechReady={speechReady}
             onAnswer={answer}
             onRead={readQuestion}
@@ -611,6 +700,7 @@ function App() {
             score={score}
             total={questions.length}
             reward={roundReward}
+            sceneReward={currentSceneReward}
             unlockedCount={saveData.unlockedIds.length}
             onPlay={() => startRound()}
             onDex={() => setScreen("dex")}
@@ -695,6 +785,7 @@ type StartScreenProps = {
   difficulty: Difficulty;
   bestScore: number;
   unlockedCount: number;
+  baseRewards: Array<(typeof sceneRewards)[SceneRewardId]>;
   musicOn: boolean;
   onLevel: (level: RescueLevel) => void;
   onDifficulty: (difficulty: Difficulty) => void;
@@ -708,6 +799,7 @@ function StartScreen({
   difficulty,
   bestScore,
   unlockedCount,
+  baseRewards,
   musicOn,
   onLevel,
   onDifficulty,
@@ -781,6 +873,45 @@ function StartScreen({
         </button>
         <span className="best-badge">最好 {bestScore}/5</span>
       </div>
+      <BasePreview rewards={baseRewards} />
+    </section>
+  );
+}
+
+function BasePreview({
+  rewards,
+}: {
+  rewards: Array<(typeof sceneRewards)[SceneRewardId]>;
+}) {
+  const unlockedTitles = new Set(rewards.map((reward) => reward.title));
+
+  return (
+    <section className="base-preview" aria-label="恐龙基地">
+      <div className="base-title">
+        <span>小宝的恐龙基地</span>
+        <strong>{rewards.length}/3</strong>
+      </div>
+      <div className="base-parts">
+        {Object.values(sceneRewards).map((reward) => {
+          const unlocked = unlockedTitles.has(reward.title);
+          return (
+            <div
+              className={`base-part ${unlocked ? "unlocked" : ""}`}
+              key={reward.title}
+            >
+              <span>{reward.title}</span>
+              <small>{unlocked ? "已点亮" : "等小宝救援"}</small>
+            </div>
+          );
+        })}
+      </div>
+      <div className="base-dinos" aria-hidden="true">
+        {dinos.map((dino, index) => (
+          <span className={`base-dino base-dino-${index}`} key={dino.id}>
+            <DinoPortrait dino={dino} />
+          </span>
+        ))}
+      </div>
     </section>
   );
 }
@@ -791,6 +922,7 @@ type RescueSceneProps = {
   total: number;
   score: number;
   feedback: Feedback;
+  wrongAttempts: number;
   speechReady: boolean;
   onAnswer: (answer: number) => void;
   onRead: () => void;
@@ -803,12 +935,15 @@ function RescueScene({
   total,
   score,
   feedback,
+  wrongAttempts,
   speechReady,
   onAnswer,
   onRead,
   onAiHint,
 }: RescueSceneProps) {
-  const rescueDino = dinos[questionIndex % dinos.length];
+  const rescueDino =
+    dinos.find((dino) => dino.id === question.rescueDinoId) ??
+    dinos[questionIndex % dinos.length];
 
   return (
     <div className="play-grid">
@@ -821,9 +956,10 @@ function RescueScene({
           </span>
         </div>
         <AnimatedQuestionDemo
-          dino={rescueDino}
+          dino={helperDino}
           question={question}
           feedback={feedback}
+          wrongAttempts={wrongAttempts}
         />
         <div className="voice-actions">
           <button className="voice-button" onClick={onRead}>
@@ -831,8 +967,8 @@ function RescueScene({
             读给{CHILD_NAME}听
           </button>
           <button className="ai-button" onClick={onAiHint}>
-            <Bot size={26} />
-            爸爸提示
+            <Radio size={26} />
+            爸爸对讲机
           </button>
         </div>
         <RewardTray feedback={feedback} hintType={question.hintType} />
@@ -842,16 +978,21 @@ function RescueScene({
         <RescueDinoStatus
           dino={rescueDino}
           feedback={feedback}
-          progress={questionIndex}
+          progress={feedback === "correct" ? questionIndex + 1 : questionIndex}
           total={total}
+          question={question}
+          wrongAttempts={wrongAttempts}
           speechReady={speechReady}
         />
         <EquationCard question={question} feedback={feedback} />
+        <StrategyCard question={question} wrongAttempts={wrongAttempts} feedback={feedback} />
       </aside>
 
       <AnswerPad
         options={question.options}
         feedback={feedback}
+        hintType={question.hintType}
+        showQuantity={wrongAttempts > 0}
         onAnswer={onAnswer}
       />
     </div>
@@ -862,40 +1003,237 @@ type AnimatedQuestionDemoProps = {
   dino: Dino;
   question: Question;
   feedback: Feedback;
+  wrongAttempts: number;
 };
 
 function AnimatedQuestionDemo({
   dino,
   question,
   feedback,
+  wrongAttempts,
 }: AnimatedQuestionDemoProps) {
-  const leftItems = Array.from({ length: question.left });
-  const rightItems = Array.from({ length: question.right });
-  const isSubtract = question.operation === "subtract";
+  const helperMood: HelperMood =
+    feedback === "correct"
+      ? "cheer"
+      : wrongAttempts >= 2
+        ? "radio"
+        : feedback === "try"
+          ? "thinking"
+          : "reading";
 
   return (
     <div
-      className={`demo-stage ${question.operation} ${feedback}`}
+      className={`demo-stage ${question.operation} ${question.animationKind} ${feedback} hint-${Math.min(wrongAttempts, 3)}`}
       aria-label={question.prompt}
       role="img"
     >
-      <div className="demo-dino-helper" aria-hidden="true">
-        <DinoPortrait dino={dino} />
+      <DinoHelper dino={dino} mood={helperMood} />
+      <StrategyDemo question={question} feedback={feedback} wrongAttempts={wrongAttempts} />
+    </div>
+  );
+}
+
+type StrategyDemoProps = {
+  question: Question;
+  feedback: Feedback;
+  wrongAttempts: number;
+};
+
+function StrategyDemo({ question, feedback, wrongAttempts }: StrategyDemoProps) {
+  if (question.animationKind === "number-line") {
+    return <NumberLineDemo question={question} feedback={feedback} />;
+  }
+
+  if (question.animationKind === "ten-frame") {
+    return <TenFrameDemo question={question} feedback={feedback} />;
+  }
+
+  if (question.animationKind === "break-ten") {
+    return <BreakTenDemo question={question} feedback={feedback} />;
+  }
+
+  if (question.animationKind === "part-whole") {
+    return <PartWholeDemo question={question} feedback={feedback} />;
+  }
+
+  return (
+    <CountingDemo
+      question={question}
+      feedback={feedback}
+      showAnswer={wrongAttempts >= 3 || feedback === "correct"}
+    />
+  );
+}
+
+function CountingDemo({
+  question,
+  feedback,
+  showAnswer,
+}: {
+  question: Question;
+  feedback: Feedback;
+  showAnswer: boolean;
+}) {
+  const count = question.operation === "add" ? question.answer : question.left;
+  const removed = question.operation === "subtract" ? question.right : 0;
+
+  return (
+    <div className="strategy-demo counting-demo">
+      <div className="demo-label">{question.strategySummaryText}</div>
+      <div className="counting-field">
+        {Array.from({ length: count }, (_, index) => {
+          const isRemoved = question.operation === "subtract" && index >= question.answer;
+          return (
+            <span
+              className={`counting-item ${isRemoved ? "removed" : ""} ${showAnswer ? "lit" : ""}`}
+              key={index}
+              style={{ "--i": index } as CSSProperties}
+            >
+              <AssetIcon kind={question.hintType} />
+            </span>
+          );
+        })}
       </div>
-      <div className="demo-ground">
-        <div className="demo-bunch first-bunch">
-          <NumberBunch items={leftItems} type={question.hintType} compact />
+      {removed > 0 && <div className="mini-note">拿走 {removed} 个，留下 {question.answer}</div>}
+      {feedback === "correct" && <div className="strategy-answer">{question.answer}</div>}
+    </div>
+  );
+}
+
+function PartWholeDemo({ question, feedback }: { question: Question; feedback: Feedback }) {
+  const leftItems = Array.from({ length: question.left });
+  const rightItems = Array.from({ length: question.right });
+  const answerItems = Array.from({ length: question.answer });
+  const isSubtract = question.operation === "subtract";
+
+  return (
+    <div className="strategy-demo part-whole-demo">
+      <div className="part-box">
+        <NumberBunch items={leftItems} type={question.hintType} compact />
+      </div>
+      <div className="part-action">{isSubtract ? "拿走" : "合起"}</div>
+      <div className={`part-box ${isSubtract ? "taken-box" : ""}`}>
+        <NumberBunch items={rightItems} type={question.hintType} compact dimmed={isSubtract} />
+      </div>
+      <div className={`whole-box ${feedback === "correct" ? "complete" : ""}`}>
+        <span>{isSubtract ? "留下" : "总数"}</span>
+        <NumberBunch items={answerItems} type={question.hintType} compact />
+      </div>
+    </div>
+  );
+}
+
+function NumberLineDemo({ question, feedback }: { question: Question; feedback: Feedback }) {
+  const big = Math.max(question.left, question.right);
+  const steps = Math.min(question.left, question.right);
+  const points = Array.from({ length: steps + 1 }, (_, index) => big + index);
+
+  return (
+    <div className="strategy-demo number-line-demo">
+      <div className="demo-label">{question.strategySummaryText}</div>
+      <div className="number-line-track">
+        {points.map((value, index) => (
+          <span
+            className={`line-point ${index === 0 ? "start" : ""} ${index === points.length - 1 ? "finish" : ""}`}
+            key={value}
+            style={{ "--i": index } as CSSProperties}
+          >
+            <b>{value}</b>
+          </span>
+        ))}
+      </div>
+      <div className={`jump-dino ${feedback === "correct" ? "landed" : ""}`}>
+        <DinoPortrait dino={dinos.find((dino) => dino.id === question.rescueDinoId) ?? dinos[0]} />
+      </div>
+    </div>
+  );
+}
+
+function TenFrameDemo({ question, feedback }: { question: Question; feedback: Feedback }) {
+  const big = Math.max(question.left, question.right);
+  const small = Math.min(question.left, question.right);
+  const need = Math.max(0, 10 - big);
+  const rest = Math.max(0, small - need);
+  const baseFilled = Math.min(big, 10);
+  const filledUntil = Math.min(10, baseFilled + need);
+
+  return (
+    <div className="strategy-demo ten-frame-demo">
+      <div className="demo-label">{question.strategySummaryText}</div>
+      <div className={`ten-frame ${feedback === "correct" ? "packed" : ""}`}>
+        {Array.from({ length: 10 }, (_, index) => (
+          <span
+            className={`ten-cell ${index < baseFilled ? "filled base" : ""} ${index >= baseFilled && index < filledUntil ? "filled moving" : ""}`}
+            key={index}
+            style={{ "--i": index } as CSSProperties}
+          >
+            {index < filledUntil ? <AssetIcon kind={question.hintType} /> : null}
+          </span>
+        ))}
+      </div>
+      <div className="ten-rest">
+        {rest > 0 ? (
+          <>
+            <span>还剩 {rest}</span>
+            <NumberBunch items={Array.from({ length: rest })} type={question.hintType} compact />
+          </>
+        ) : (
+          <span>正好凑成十</span>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function BreakTenDemo({ question, feedback }: { question: Question; feedback: Feedback }) {
+  const ones = question.left - 10;
+  const fromTen = Math.max(0, question.right - ones);
+  const remainingTen = 10 - fromTen;
+
+  return (
+    <div className="strategy-demo break-ten-demo">
+      <div className="demo-label">{question.strategySummaryText}</div>
+      <div className={`ten-pack ${feedback === "try" ? "open" : ""}`}>
+        <span>10</span>
+        <div className="ten-frame mini">
+          {Array.from({ length: 10 }, (_, index) => (
+            <span
+              className={`ten-cell filled ${index >= remainingTen ? "removed" : ""}`}
+              key={index}
+            >
+              <AssetIcon kind={question.hintType} />
+            </span>
+          ))}
         </div>
-        <div className="demo-symbol">{isSubtract ? "-" : "+"}</div>
-        <div className={`demo-bunch second-bunch ${isSubtract ? "leaving" : "joining"}`}>
-          <NumberBunch items={rightItems} type={question.hintType} compact />
-        </div>
       </div>
-      <div className="demo-path" aria-hidden="true">
-        <span />
-        <span />
-        <span />
+      <div className="loose-pack">
+        <span>小尾巴 {ones}</span>
+        <NumberBunch
+          items={Array.from({ length: ones })}
+          type={question.hintType}
+          compact
+          dimmed={feedback !== "idle"}
+        />
       </div>
+      <div className="strategy-answer">剩 {question.answer}</div>
+    </div>
+  );
+}
+
+function DinoHelper({ dino, mood }: { dino: Dino; mood: HelperMood }) {
+  const cue =
+    mood === "cheer"
+      ? "欢呼"
+      : mood === "thinking"
+        ? "放大镜"
+        : mood === "radio"
+          ? "对讲机"
+          : "指一指";
+
+  return (
+    <div className={`dino-helper ${mood}`} aria-hidden="true">
+      <DinoPortrait dino={dino} />
+      <span>{cue}</span>
     </div>
   );
 }
@@ -925,24 +1263,83 @@ function EquationCard({ question, feedback }: EquationCardProps) {
   );
 }
 
+type StrategyCardProps = {
+  question: Question;
+  wrongAttempts: number;
+  feedback: Feedback;
+};
+
+const strategyLabels: Record<Question["strategyType"], { title: string; icon: string }> = {
+  "count-all": { title: "点亮数", icon: "1 2 3" },
+  "count-on": { title: "接着跳", icon: "+1 +1" },
+  "part-whole": { title: "合和分", icon: "□ □" },
+  "make-ten": { title: "凑成10", icon: "10" },
+  "break-ten": { title: "拆开10", icon: "10 ->" },
+};
+
+function StrategyCard({ question, wrongAttempts, feedback }: StrategyCardProps) {
+  const strategy = strategyLabels[question.strategyType];
+  const hintText =
+    wrongAttempts >= 3
+      ? "小宝看完整演示"
+      : wrongAttempts >= 2
+        ? "爸爸陪小宝数"
+        : wrongAttempts >= 1
+          ? "亮起来再看"
+          : feedback === "correct"
+            ? "小宝会用啦"
+            : "先看动画";
+
+  return (
+    <section
+      className={`strategy-card ${question.strategyType} ${wrongAttempts > 0 ? "active" : ""} ${feedback}`}
+      aria-label="数学方法提示"
+    >
+      <div className="strategy-badge">{strategy.icon}</div>
+      <div>
+        <span>{strategy.title}</span>
+        <strong>{hintText}</strong>
+        <p>{question.strategySummaryText}</p>
+      </div>
+    </section>
+  );
+}
+
 type AnswerPadProps = {
   options: number[];
   feedback: Feedback;
+  hintType: HintType;
+  showQuantity: boolean;
   onAnswer: (answer: number) => void;
 };
 
-function AnswerPad({ options, feedback, onAnswer }: AnswerPadProps) {
+function AnswerPad({
+  options,
+  feedback,
+  hintType,
+  showQuantity,
+  onAnswer,
+}: AnswerPadProps) {
   return (
     <div className="answer-pad" aria-label="选择答案">
       {options.map((option) => (
         <button
           aria-label={`选择答案 ${option}`}
-          className="answer-button"
+          className={`answer-button ${showQuantity ? "with-quantity" : ""}`}
           disabled={feedback === "correct"}
           key={option}
           onClick={() => onAnswer(option)}
         >
-          {option}
+          <strong>{option}</strong>
+          {showQuantity && (
+            <span className="answer-mini-quantity" aria-hidden="true">
+              <NumberBunch
+                items={Array.from({ length: option })}
+                type={hintType}
+                compact
+              />
+            </span>
+          )}
         </button>
       ))}
     </div>
@@ -991,6 +1388,8 @@ type RescueDinoStatusProps = {
   feedback: Feedback;
   progress: number;
   total: number;
+  question: Question;
+  wrongAttempts: number;
   speechReady: boolean;
 };
 
@@ -999,20 +1398,37 @@ function RescueDinoStatus({
   feedback,
   progress,
   total,
+  question,
+  wrongAttempts,
   speechReady,
 }: RescueDinoStatusProps) {
   const rescuePercent = Math.round((progress / total) * 100);
   const status =
     feedback === "correct"
       ? "我好多啦！"
-      : feedback === "try"
-        ? "小宝别急"
+      : wrongAttempts >= 2
+      ? "爸爸来陪你数"
+      : wrongAttempts === 1
+        ? "再帮我看一看"
         : rescuePercent === 0
           ? "等小宝来"
-          : "快得救啦";
+          : rescuePercent < 60
+            ? "恢复一点"
+            : "快得救啦";
+  const itemName =
+    question.hintType === "leaf"
+      ? "树叶"
+      : question.hintType === "egg"
+        ? "恐龙蛋"
+        : question.hintType === "fruit"
+          ? "果子"
+          : "脚印";
 
   return (
-    <section className={`rescue-status ${feedback}`} aria-label="被救援恐龙状态">
+    <section
+      className={`rescue-status ${feedback} rescue-step-${Math.min(wrongAttempts, 2)}`}
+      aria-label="被救援恐龙状态"
+    >
       <DinoPortrait dino={dino} />
       <div className="rescue-copy">
         <span>被救援：{dino.species}</span>
@@ -1020,7 +1436,7 @@ function RescueDinoStatus({
         <div className="rescue-meter" aria-label={`救援进度 ${rescuePercent}%`}>
           <span style={{ width: `${rescuePercent}%` }} />
         </div>
-        <small>{speechReady ? "AI爸爸正在陪小宝" : "点读题开始出声"}</small>
+        <small>{speechReady ? `小宝正在送${itemName}` : "点读题开始出声"}</small>
       </div>
     </section>
   );
@@ -1095,6 +1511,7 @@ type SummaryScreenProps = {
   score: number;
   total: number;
   reward: Dino;
+  sceneReward: (typeof sceneRewards)[SceneRewardId];
   unlockedCount: number;
   onPlay: () => void;
   onDex: () => void;
@@ -1104,6 +1521,7 @@ function SummaryScreen({
   score,
   total,
   reward,
+  sceneReward,
   unlockedCount,
   onPlay,
   onDex,
@@ -1116,11 +1534,23 @@ function SummaryScreen({
         </div>
         <div>
           <span className="mission-chip">{CHILD_NAME}救援完成</span>
-          <h1>{score === total ? `${CHILD_NAME}满星！` : "小队回到营地啦！"}</h1>
+          <h1>{score === total ? `${CHILD_NAME}救援全完成！` : "小队回到营地啦！"}</h1>
           <p>
-            {CHILD_NAME}得到 {score} 颗星，解锁了 {reward.species} {reward.name}。
+            {CHILD_NAME}救到 {score} 次恐龙，{sceneReward.title}亮起来了。
           </p>
+          <p>新伙伴：{reward.species} {reward.name}。</p>
           <p>{reward.reward}</p>
+        </div>
+      </div>
+      <div className="scene-reward">
+        <strong>{sceneReward.title}</strong>
+        <span>{sceneReward.text}</span>
+        <div className="reward-marks">
+          {sceneReward.marks.map((mark, index) => (
+            <span className={index < score ? "lit" : ""} key={mark}>
+              {mark}
+            </span>
+          ))}
         </div>
       </div>
       <div className="star-row">

@@ -183,6 +183,49 @@ const itemUnitByHint = {
   leaf: "片树叶",
 };
 
+const sceneRewardByLevel = {
+  valley: "bridge",
+  nest: "nest",
+  river: "supply",
+};
+
+const rescueDinos = ["trike", "stego", "brachio", "rex", "raptor"];
+
+const pickStrategy = ({ difficulty, operation, left, right, answer, index }) => {
+  if (difficulty === "sprout") return index % 2 === 0 ? "part-whole" : "count-all";
+  if (operation === "add" && difficulty === "helper" && index < 2) return "count-on";
+  if (operation === "add" && answer > 10) return "make-ten";
+  if (operation === "add") return "count-on";
+  if (difficulty === "hero" && left > 10) return "break-ten";
+  return index % 2 === 0 ? "part-whole" : "count-all";
+};
+
+const animationByStrategy = {
+  "break-ten": "break-ten",
+  "count-all": "counting",
+  "count-on": "number-line",
+  "make-ten": "ten-frame",
+  "part-whole": "part-whole",
+};
+
+const makeStrategySummary = ({ operation, left, right, strategyType }) => {
+  const answer = operation === "add" ? left + right : left - right;
+  const big = Math.max(left, right);
+  const small = Math.min(left, right);
+
+  if (strategyType === "count-on") return `从 ${big} 往后跳 ${small} 下`;
+  if (strategyType === "make-ten") {
+    const need = 10 - big;
+    return `${big} 先变 10，再加 ${small - need}`;
+  }
+  if (strategyType === "break-ten") return `${left} 拆成 10 和 ${left - 10}`;
+  if (strategyType === "part-whole") {
+    return operation === "add" ? `${left} 和 ${right} 合起来` : `从 ${left} 里拿走 ${right}`;
+  }
+
+  return `点亮数到 ${answer}`;
+};
+
 const successLines = [
   "小宝答对啦！小恐龙站起来挥挥手，救援队继续前进。",
   "小宝真棒！补给送到了，小恐龙的眼睛亮起来啦。",
@@ -241,9 +284,45 @@ const makeMathHint = ({ operation, left, right, answer, itemUnit }) => {
   return `先摆好 ${left} ${itemUnit}，再轻轻拿走 ${right} 个。留下来的就是 ${answer}。`;
 };
 
+const makeStrategyHint = (seed) => {
+  const { left, right, answer, itemUnit, operation, strategyType } = seed;
+  const big = Math.max(left, right);
+  const small = Math.min(left, right);
+
+  if (strategyType === "count-on") {
+    return `先记住大的 ${big}，小恐龙往后跳 ${small} 下，跳到 ${answer}。`;
+  }
+
+  if (strategyType === "make-ten") {
+    const need = 10 - big;
+    const rest = small - need;
+    return `${big} 还差 ${need} 到 10，从 ${small} 个里拿 ${need} 个过来。先变成 10，还剩 ${rest} 个，所以是 ${answer}。`;
+  }
+
+  if (strategyType === "break-ten") {
+    const ones = left - 10;
+    if (left === 20) {
+      return `20 是两个 10。先从一个 10 里拿走 ${right} 个，还剩 ${10 - right} 个，再加另一个 10，就是 ${answer}。`;
+    }
+    if (right <= ones) {
+      return `${left} 是 10 和 ${ones}。先从小尾巴里拿走 ${right} 个，剩下 ${answer}。`;
+    }
+    const fromTen = Math.max(0, right - ones);
+    return `${left} 是 10 和 ${ones}。先拿走 ${ones} 个，再从 10 里面拿 ${fromTen} 个，剩下 ${answer}。`;
+  }
+
+  if (strategyType === "part-whole") {
+    return operation === "add"
+      ? `${left} ${itemUnit}是一部分，${right} 个是另一部分。两部分合起来，就是 ${answer}。`
+      : `${left} ${itemUnit}是整体，拿走 ${right} 个，留下来的部分就是 ${answer}。`;
+  }
+
+  return `我们一个一个点亮数。数到最后一个，就是 ${answer}。`;
+};
+
 const makeFallbackText = (seed, index) => ({
   promptText: `${CHILD_NAME}，爸爸来读救援任务。${seed.prompt} 你来选一个数字吧。`,
-  dadHintText: `${CHILD_NAME}，爸爸陪你慢慢看。${seed.mathHint}`,
+  dadHintText: `${CHILD_NAME}，爸爸陪你慢慢看。${makeStrategyHint(seed)}`,
   successText: successLines[index % successLines.length],
 });
 
@@ -256,6 +335,21 @@ const makeSeed = (level, difficulty, rawPair, index) => {
   const prompt = template.story(left, right);
   const itemName = template.itemName ?? itemNameByHint[template.hintType];
   const itemUnit = itemUnitByHint[template.hintType];
+  const strategyType = pickStrategy({
+    answer,
+    difficulty,
+    index,
+    left,
+    operation,
+    right,
+  });
+  const animationKind = animationByStrategy[strategyType];
+  const strategySummaryText = makeStrategySummary({
+    left,
+    operation,
+    right,
+    strategyType,
+  });
   const mathHint = makeMathHint({ operation, left, right, answer, itemUnit });
 
   return {
@@ -272,6 +366,11 @@ const makeSeed = (level, difficulty, rawPair, index) => {
     itemName,
     itemUnit,
     mathHint,
+    strategyType,
+    animationKind,
+    rescueDinoId: rescueDinos[index % rescueDinos.length],
+    sceneRewardId: sceneRewardByLevel[level],
+    strategySummaryText,
     options: makeOptions(answer, index),
   };
 };
@@ -323,7 +422,8 @@ const generateText = async (seed) => {
             answer: seed.answer,
             itemName: seed.itemName,
             itemUnit: seed.itemUnit,
-            deterministicMathHint: seed.mathHint,
+            strategyType: seed.strategyType,
+            deterministicMathHint: makeStrategyHint(seed),
             requirements: [
               "promptText 直接叫小宝，并自然读出救援任务，最后问选哪个数字。",
               "dadHintText 直接叫小宝，必须使用 deterministicMathHint 的数学解释，可以改写得更像爸爸，但不能改变算式。",
@@ -504,6 +604,11 @@ const buildManifest = async () => {
       successText: text.successText,
       mission: seed.mission,
       hintType: seed.hintType,
+      strategyType: seed.strategyType,
+      animationKind: seed.animationKind,
+      rescueDinoId: seed.rescueDinoId,
+      sceneRewardId: seed.sceneRewardId,
+      strategySummaryText: seed.strategySummaryText,
       options: seed.options,
       audio,
     });

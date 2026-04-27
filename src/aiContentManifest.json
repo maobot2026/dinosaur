@@ -33,7 +33,12 @@
         "read": "ai-audio/valley-sprout-01-read.mp3",
         "hint": "ai-audio/valley-sprout-01-hint.mp3",
         "success": "ai-audio/valley-sprout-01-success.mp3"
-      }
+      },
+      "strategyType": "part-whole",
+      "animationKind": "part-whole",
+      "rescueDinoId": "trike",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "2 和 3 合起来"
     },
     {
       "id": "valley-sprout-02",
@@ -58,7 +63,12 @@
         "read": "ai-audio/valley-sprout-02-read.mp3",
         "hint": "ai-audio/valley-sprout-02-hint.mp3",
         "success": "ai-audio/valley-sprout-02-success.mp3"
-      }
+      },
+      "strategyType": "count-all",
+      "animationKind": "counting",
+      "rescueDinoId": "stego",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "每个都点亮数一数"
     },
     {
       "id": "valley-sprout-03",
@@ -83,7 +93,12 @@
         "read": "ai-audio/valley-sprout-03-read.mp3",
         "hint": "ai-audio/valley-sprout-03-hint.mp3",
         "success": "ai-audio/valley-sprout-03-success.mp3"
-      }
+      },
+      "strategyType": "part-whole",
+      "animationKind": "part-whole",
+      "rescueDinoId": "brachio",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "6 和 3 合起来"
     },
     {
       "id": "valley-sprout-04",
@@ -108,7 +123,12 @@
         "read": "ai-audio/valley-sprout-04-read.mp3",
         "hint": "ai-audio/valley-sprout-04-hint.mp3",
         "success": "ai-audio/valley-sprout-04-success.mp3"
-      }
+      },
+      "strategyType": "count-all",
+      "animationKind": "counting",
+      "rescueDinoId": "rex",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "每个都点亮数一数"
     },
     {
       "id": "valley-sprout-05",
@@ -133,7 +153,12 @@
         "read": "ai-audio/valley-sprout-05-read.mp3",
         "hint": "ai-audio/valley-sprout-05-hint.mp3",
         "success": "ai-audio/valley-sprout-05-success.mp3"
-      }
+      },
+      "strategyType": "part-whole",
+      "animationKind": "part-whole",
+      "rescueDinoId": "raptor",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "7 和 2 合起来"
     },
     {
       "id": "valley-sprout-06",
@@ -158,7 +183,12 @@
         "read": "ai-audio/valley-sprout-06-read.mp3",
         "hint": "ai-audio/valley-sprout-06-hint.mp3",
         "success": "ai-audio/valley-sprout-06-success.mp3"
-      }
+      },
+      "strategyType": "count-all",
+      "animationKind": "counting",
+      "rescueDinoId": "trike",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "每个都点亮数一数"
     },
     {
       "id": "valley-sprout-07",
@@ -183,7 +213,12 @@
         "read": "ai-audio/valley-sprout-07-read.mp3",
         "hint": "ai-audio/valley-sprout-07-hint.mp3",
         "success": "ai-audio/valley-sprout-07-success.mp3"
-      }
+      },
+      "strategyType": "part-whole",
+      "animationKind": "part-whole",
+      "rescueDinoId": "stego",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "从 8 里拿走 3"
     },
     {
       "id": "valley-sprout-08",
@@ -208,7 +243,12 @@
         "read": "ai-audio/valley-sprout-08-read.mp3",
         "hint": "ai-audio/valley-sprout-08-hint.mp3",
         "success": "ai-audio/valley-sprout-08-success.mp3"
-      }
+      },
+      "strategyType": "count-all",
+      "animationKind": "counting",
+      "rescueDinoId": "brachio",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "每个都点亮数一数"
     },
     {
       "id": "valley-helper-01",
@@ -233,7 +273,12 @@
         "read": "ai-audio/valley-helper-01-read.mp3",
         "hint": "ai-audio/valley-helper-01-hint.mp3",
         "success": "ai-audio/valley-helper-01-success.mp3"
-      }
+      },
+      "strategyType": "count-on",
+      "animationKind": "number-line",
+      "rescueDinoId": "rex",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "从 8 往后跳 5 下"
     },
     {
       "id": "valley-helper-02",
@@ -258,7 +303,12 @@
         "read": "ai-audio/valley-helper-02-read.mp3",
         "hint": "ai-audio/valley-helper-02-hint.mp3",
         "success": "ai-audio/valley-helper-02-success.mp3"
-      }
+      },
+      "strategyType": "count-on",
+      "animationKind": "number-line",
+      "rescueDinoId": "raptor",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "从 7 往后跳 6 下"
     },
     {
       "id": "valley-helper-03",
@@ -283,7 +333,12 @@
         "read": "ai-audio/valley-helper-03-read.mp3",
         "hint": "ai-audio/valley-helper-03-hint.mp3",
         "success": "ai-audio/valley-helper-03-success.mp3"
-      }
+      },
+      "strategyType": "make-ten",
+      "animationKind": "ten-frame",
+      "rescueDinoId": "trike",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "9 先变 10，再加 3"
     },
     {
       "id": "valley-helper-04",
@@ -308,7 +363,12 @@
         "read": "ai-audio/valley-helper-04-read.mp3",
         "hint": "ai-audio/valley-helper-04-hint.mp3",
         "success": "ai-audio/valley-helper-04-success.mp3"
-      }
+      },
+      "strategyType": "make-ten",
+      "animationKind": "ten-frame",
+      "rescueDinoId": "stego",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "8 先变 10，再加 4"
     },
     {
       "id": "valley-helper-05",
@@ -333,7 +393,12 @@
         "read": "ai-audio/valley-helper-05-read.mp3",
         "hint": "ai-audio/valley-helper-05-hint.mp3",
         "success": "ai-audio/valley-helper-05-success.mp3"
-      }
+      },
+      "strategyType": "part-whole",
+      "animationKind": "part-whole",
+      "rescueDinoId": "brachio",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "从 14 里拿走 5"
     },
     {
       "id": "valley-helper-06",
@@ -358,7 +423,12 @@
         "read": "ai-audio/valley-helper-06-read.mp3",
         "hint": "ai-audio/valley-helper-06-hint.mp3",
         "success": "ai-audio/valley-helper-06-success.mp3"
-      }
+      },
+      "strategyType": "count-all",
+      "animationKind": "counting",
+      "rescueDinoId": "rex",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "每个都点亮数一数"
     },
     {
       "id": "valley-helper-07",
@@ -383,7 +453,12 @@
         "read": "ai-audio/valley-helper-07-read.mp3",
         "hint": "ai-audio/valley-helper-07-hint.mp3",
         "success": "ai-audio/valley-helper-07-success.mp3"
-      }
+      },
+      "strategyType": "part-whole",
+      "animationKind": "part-whole",
+      "rescueDinoId": "raptor",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "从 15 里拿走 8"
     },
     {
       "id": "valley-helper-08",
@@ -408,7 +483,12 @@
         "read": "ai-audio/valley-helper-08-read.mp3",
         "hint": "ai-audio/valley-helper-08-hint.mp3",
         "success": "ai-audio/valley-helper-08-success.mp3"
-      }
+      },
+      "strategyType": "count-all",
+      "animationKind": "counting",
+      "rescueDinoId": "trike",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "每个都点亮数一数"
     },
     {
       "id": "valley-hero-01",
@@ -433,7 +513,12 @@
         "read": "ai-audio/valley-hero-01-read.mp3",
         "hint": "ai-audio/valley-hero-01-hint.mp3",
         "success": "ai-audio/valley-hero-01-success.mp3"
-      }
+      },
+      "strategyType": "make-ten",
+      "animationKind": "ten-frame",
+      "rescueDinoId": "stego",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "9 先变 10，再加 7"
     },
     {
       "id": "valley-hero-02",
@@ -458,7 +543,12 @@
         "read": "ai-audio/valley-hero-02-read.mp3",
         "hint": "ai-audio/valley-hero-02-hint.mp3",
         "success": "ai-audio/valley-hero-02-success.mp3"
-      }
+      },
+      "strategyType": "make-ten",
+      "animationKind": "ten-frame",
+      "rescueDinoId": "brachio",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "12 先变 10，再加 8"
     },
     {
       "id": "valley-hero-03",
@@ -483,7 +573,12 @@
         "read": "ai-audio/valley-hero-03-read.mp3",
         "hint": "ai-audio/valley-hero-03-hint.mp3",
         "success": "ai-audio/valley-hero-03-success.mp3"
-      }
+      },
+      "strategyType": "make-ten",
+      "animationKind": "ten-frame",
+      "rescueDinoId": "rex",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "13 先变 10，再加 10"
     },
     {
       "id": "valley-hero-04",
@@ -508,7 +603,12 @@
         "read": "ai-audio/valley-hero-04-read.mp3",
         "hint": "ai-audio/valley-hero-04-hint.mp3",
         "success": "ai-audio/valley-hero-04-success.mp3"
-      }
+      },
+      "strategyType": "make-ten",
+      "animationKind": "ten-frame",
+      "rescueDinoId": "raptor",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "11 先变 10，再加 9"
     },
     {
       "id": "valley-hero-05",
@@ -533,7 +633,12 @@
         "read": "ai-audio/valley-hero-05-read.mp3",
         "hint": "ai-audio/valley-hero-05-hint.mp3",
         "success": "ai-audio/valley-hero-05-success.mp3"
-      }
+      },
+      "strategyType": "break-ten",
+      "animationKind": "break-ten",
+      "rescueDinoId": "trike",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "20 拆成 10 和 10"
     },
     {
       "id": "valley-hero-06",
@@ -558,7 +663,12 @@
         "read": "ai-audio/valley-hero-06-read.mp3",
         "hint": "ai-audio/valley-hero-06-hint.mp3",
         "success": "ai-audio/valley-hero-06-success.mp3"
-      }
+      },
+      "strategyType": "break-ten",
+      "animationKind": "break-ten",
+      "rescueDinoId": "stego",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "18 拆成 10 和 8"
     },
     {
       "id": "valley-hero-07",
@@ -583,7 +693,12 @@
         "read": "ai-audio/valley-hero-07-read.mp3",
         "hint": "ai-audio/valley-hero-07-hint.mp3",
         "success": "ai-audio/valley-hero-07-success.mp3"
-      }
+      },
+      "strategyType": "break-ten",
+      "animationKind": "break-ten",
+      "rescueDinoId": "brachio",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "16 拆成 10 和 6"
     },
     {
       "id": "valley-hero-08",
@@ -608,7 +723,12 @@
         "read": "ai-audio/valley-hero-08-read.mp3",
         "hint": "ai-audio/valley-hero-08-hint.mp3",
         "success": "ai-audio/valley-hero-08-success.mp3"
-      }
+      },
+      "strategyType": "break-ten",
+      "animationKind": "break-ten",
+      "rescueDinoId": "rex",
+      "sceneRewardId": "bridge",
+      "strategySummaryText": "15 拆成 10 和 5"
     },
     {
       "id": "nest-sprout-01",
@@ -633,7 +753,12 @@
         "read": "ai-audio/nest-sprout-01-read.mp3",
         "hint": "ai-audio/nest-sprout-01-hint.mp3",
         "success": "ai-audio/nest-sprout-01-success.mp3"
-      }
+      },
+      "strategyType": "part-whole",
+      "animationKind": "part-whole",
+      "rescueDinoId": "raptor",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "2 和 3 合起来"
     },
     {
       "id": "nest-sprout-02",
@@ -658,7 +783,12 @@
         "read": "ai-audio/nest-sprout-02-read.mp3",
         "hint": "ai-audio/nest-sprout-02-hint.mp3",
         "success": "ai-audio/nest-sprout-02-success.mp3"
-      }
+      },
+      "strategyType": "count-all",
+      "animationKind": "counting",
+      "rescueDinoId": "trike",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "每个都点亮数一数"
     },
     {
       "id": "nest-sprout-03",
@@ -683,7 +813,12 @@
         "read": "ai-audio/nest-sprout-03-read.mp3",
         "hint": "ai-audio/nest-sprout-03-hint.mp3",
         "success": "ai-audio/nest-sprout-03-success.mp3"
-      }
+      },
+      "strategyType": "part-whole",
+      "animationKind": "part-whole",
+      "rescueDinoId": "stego",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "6 和 3 合起来"
     },
     {
       "id": "nest-sprout-04",
@@ -708,7 +843,12 @@
         "read": "ai-audio/nest-sprout-04-read.mp3",
         "hint": "ai-audio/nest-sprout-04-hint.mp3",
         "success": "ai-audio/nest-sprout-04-success.mp3"
-      }
+      },
+      "strategyType": "count-all",
+      "animationKind": "counting",
+      "rescueDinoId": "brachio",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "每个都点亮数一数"
     },
     {
       "id": "nest-sprout-05",
@@ -733,7 +873,12 @@
         "read": "ai-audio/nest-sprout-05-read.mp3",
         "hint": "ai-audio/nest-sprout-05-hint.mp3",
         "success": "ai-audio/nest-sprout-05-success.mp3"
-      }
+      },
+      "strategyType": "part-whole",
+      "animationKind": "part-whole",
+      "rescueDinoId": "rex",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "7 和 2 合起来"
     },
     {
       "id": "nest-sprout-06",
@@ -758,7 +903,12 @@
         "read": "ai-audio/nest-sprout-06-read.mp3",
         "hint": "ai-audio/nest-sprout-06-hint.mp3",
         "success": "ai-audio/nest-sprout-06-success.mp3"
-      }
+      },
+      "strategyType": "count-all",
+      "animationKind": "counting",
+      "rescueDinoId": "raptor",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "每个都点亮数一数"
     },
     {
       "id": "nest-sprout-07",
@@ -783,7 +933,12 @@
         "read": "ai-audio/nest-sprout-07-read.mp3",
         "hint": "ai-audio/nest-sprout-07-hint.mp3",
         "success": "ai-audio/nest-sprout-07-success.mp3"
-      }
+      },
+      "strategyType": "part-whole",
+      "animationKind": "part-whole",
+      "rescueDinoId": "trike",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "从 8 里拿走 3"
     },
     {
       "id": "nest-sprout-08",
@@ -808,7 +963,12 @@
         "read": "ai-audio/nest-sprout-08-read.mp3",
         "hint": "ai-audio/nest-sprout-08-hint.mp3",
         "success": "ai-audio/nest-sprout-08-success.mp3"
-      }
+      },
+      "strategyType": "count-all",
+      "animationKind": "counting",
+      "rescueDinoId": "stego",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "每个都点亮数一数"
     },
     {
       "id": "nest-helper-01",
@@ -833,7 +993,12 @@
         "read": "ai-audio/nest-helper-01-read.mp3",
         "hint": "ai-audio/nest-helper-01-hint.mp3",
         "success": "ai-audio/nest-helper-01-success.mp3"
-      }
+      },
+      "strategyType": "count-on",
+      "animationKind": "number-line",
+      "rescueDinoId": "brachio",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "从 8 往后跳 5 下"
     },
     {
       "id": "nest-helper-02",
@@ -858,7 +1023,12 @@
         "read": "ai-audio/nest-helper-02-read.mp3",
         "hint": "ai-audio/nest-helper-02-hint.mp3",
         "success": "ai-audio/nest-helper-02-success.mp3"
-      }
+      },
+      "strategyType": "count-on",
+      "animationKind": "number-line",
+      "rescueDinoId": "rex",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "从 7 往后跳 6 下"
     },
     {
       "id": "nest-helper-03",
@@ -883,7 +1053,12 @@
         "read": "ai-audio/nest-helper-03-read.mp3",
         "hint": "ai-audio/nest-helper-03-hint.mp3",
         "success": "ai-audio/nest-helper-03-success.mp3"
-      }
+      },
+      "strategyType": "make-ten",
+      "animationKind": "ten-frame",
+      "rescueDinoId": "raptor",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "9 先变 10，再加 3"
     },
     {
       "id": "nest-helper-04",
@@ -908,7 +1083,12 @@
         "read": "ai-audio/nest-helper-04-read.mp3",
         "hint": "ai-audio/nest-helper-04-hint.mp3",
         "success": "ai-audio/nest-helper-04-success.mp3"
-      }
+      },
+      "strategyType": "make-ten",
+      "animationKind": "ten-frame",
+      "rescueDinoId": "trike",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "8 先变 10，再加 4"
     },
     {
       "id": "nest-helper-05",
@@ -933,7 +1113,12 @@
         "read": "ai-audio/nest-helper-05-read.mp3",
         "hint": "ai-audio/nest-helper-05-hint.mp3",
         "success": "ai-audio/nest-helper-05-success.mp3"
-      }
+      },
+      "strategyType": "part-whole",
+      "animationKind": "part-whole",
+      "rescueDinoId": "stego",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "从 14 里拿走 5"
     },
     {
       "id": "nest-helper-06",
@@ -958,7 +1143,12 @@
         "read": "ai-audio/nest-helper-06-read.mp3",
         "hint": "ai-audio/nest-helper-06-hint.mp3",
         "success": "ai-audio/nest-helper-06-success.mp3"
-      }
+      },
+      "strategyType": "count-all",
+      "animationKind": "counting",
+      "rescueDinoId": "brachio",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "每个都点亮数一数"
     },
     {
       "id": "nest-helper-07",
@@ -983,7 +1173,12 @@
         "read": "ai-audio/nest-helper-07-read.mp3",
         "hint": "ai-audio/nest-helper-07-hint.mp3",
         "success": "ai-audio/nest-helper-07-success.mp3"
-      }
+      },
+      "strategyType": "part-whole",
+      "animationKind": "part-whole",
+      "rescueDinoId": "rex",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "从 15 里拿走 8"
     },
     {
       "id": "nest-helper-08",
@@ -1008,7 +1203,12 @@
         "read": "ai-audio/nest-helper-08-read.mp3",
         "hint": "ai-audio/nest-helper-08-hint.mp3",
         "success": "ai-audio/nest-helper-08-success.mp3"
-      }
+      },
+      "strategyType": "count-all",
+      "animationKind": "counting",
+      "rescueDinoId": "raptor",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "每个都点亮数一数"
     },
     {
       "id": "nest-hero-01",
@@ -1033,7 +1233,12 @@
         "read": "ai-audio/nest-hero-01-read.mp3",
         "hint": "ai-audio/nest-hero-01-hint.mp3",
         "success": "ai-audio/nest-hero-01-success.mp3"
-      }
+      },
+      "strategyType": "make-ten",
+      "animationKind": "ten-frame",
+      "rescueDinoId": "trike",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "9 先变 10，再加 7"
     },
     {
       "id": "nest-hero-02",
@@ -1058,7 +1263,12 @@
         "read": "ai-audio/nest-hero-02-read.mp3",
         "hint": "ai-audio/nest-hero-02-hint.mp3",
         "success": "ai-audio/nest-hero-02-success.mp3"
-      }
+      },
+      "strategyType": "make-ten",
+      "animationKind": "ten-frame",
+      "rescueDinoId": "stego",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "12 先变 10，再加 8"
     },
     {
       "id": "nest-hero-03",
@@ -1083,7 +1293,12 @@
         "read": "ai-audio/nest-hero-03-read.mp3",
         "hint": "ai-audio/nest-hero-03-hint.mp3",
         "success": "ai-audio/nest-hero-03-success.mp3"
-      }
+      },
+      "strategyType": "make-ten",
+      "animationKind": "ten-frame",
+      "rescueDinoId": "brachio",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "13 先变 10，再加 10"
     },
     {
       "id": "nest-hero-04",
@@ -1108,7 +1323,12 @@
         "read": "ai-audio/nest-hero-04-read.mp3",
         "hint": "ai-audio/nest-hero-04-hint.mp3",
         "success": "ai-audio/nest-hero-04-success.mp3"
-      }
+      },
+      "strategyType": "make-ten",
+      "animationKind": "ten-frame",
+      "rescueDinoId": "rex",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "11 先变 10，再加 9"
     },
     {
       "id": "nest-hero-05",
@@ -1133,7 +1353,12 @@
         "read": "ai-audio/nest-hero-05-read.mp3",
         "hint": "ai-audio/nest-hero-05-hint.mp3",
         "success": "ai-audio/nest-hero-05-success.mp3"
-      }
+      },
+      "strategyType": "break-ten",
+      "animationKind": "break-ten",
+      "rescueDinoId": "raptor",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "20 拆成 10 和 10"
     },
     {
       "id": "nest-hero-06",
@@ -1158,7 +1383,12 @@
         "read": "ai-audio/nest-hero-06-read.mp3",
         "hint": "ai-audio/nest-hero-06-hint.mp3",
         "success": "ai-audio/nest-hero-06-success.mp3"
-      }
+      },
+      "strategyType": "break-ten",
+      "animationKind": "break-ten",
+      "rescueDinoId": "trike",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "18 拆成 10 和 8"
     },
     {
       "id": "nest-hero-07",
@@ -1183,7 +1413,12 @@
         "read": "ai-audio/nest-hero-07-read.mp3",
         "hint": "ai-audio/nest-hero-07-hint.mp3",
         "success": "ai-audio/nest-hero-07-success.mp3"
-      }
+      },
+      "strategyType": "break-ten",
+      "animationKind": "break-ten",
+      "rescueDinoId": "stego",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "16 拆成 10 和 6"
     },
     {
       "id": "nest-hero-08",
@@ -1208,7 +1443,12 @@
         "read": "ai-audio/nest-hero-08-read.mp3",
         "hint": "ai-audio/nest-hero-08-hint.mp3",
         "success": "ai-audio/nest-hero-08-success.mp3"
-      }
+      },
+      "strategyType": "break-ten",
+      "animationKind": "break-ten",
+      "rescueDinoId": "brachio",
+      "sceneRewardId": "nest",
+      "strategySummaryText": "15 拆成 10 和 5"
     },
     {
       "id": "river-sprout-01",
@@ -1233,7 +1473,12 @@
         "read": "ai-audio/river-sprout-01-read.mp3",
         "hint": "ai-audio/river-sprout-01-hint.mp3",
         "success": "ai-audio/river-sprout-01-success.mp3"
-      }
+      },
+      "strategyType": "part-whole",
+      "animationKind": "part-whole",
+      "rescueDinoId": "rex",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "2 和 3 合起来"
     },
     {
       "id": "river-sprout-02",
@@ -1258,7 +1503,12 @@
         "read": "ai-audio/river-sprout-02-read.mp3",
         "hint": "ai-audio/river-sprout-02-hint.mp3",
         "success": "ai-audio/river-sprout-02-success.mp3"
-      }
+      },
+      "strategyType": "count-all",
+      "animationKind": "counting",
+      "rescueDinoId": "raptor",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "每个都点亮数一数"
     },
     {
       "id": "river-sprout-03",
@@ -1283,7 +1533,12 @@
         "read": "ai-audio/river-sprout-03-read.mp3",
         "hint": "ai-audio/river-sprout-03-hint.mp3",
         "success": "ai-audio/river-sprout-03-success.mp3"
-      }
+      },
+      "strategyType": "part-whole",
+      "animationKind": "part-whole",
+      "rescueDinoId": "trike",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "6 和 3 合起来"
     },
     {
       "id": "river-sprout-04",
@@ -1308,7 +1563,12 @@
         "read": "ai-audio/river-sprout-04-read.mp3",
         "hint": "ai-audio/river-sprout-04-hint.mp3",
         "success": "ai-audio/river-sprout-04-success.mp3"
-      }
+      },
+      "strategyType": "count-all",
+      "animationKind": "counting",
+      "rescueDinoId": "stego",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "每个都点亮数一数"
     },
     {
       "id": "river-sprout-05",
@@ -1333,7 +1593,12 @@
         "read": "ai-audio/river-sprout-05-read.mp3",
         "hint": "ai-audio/river-sprout-05-hint.mp3",
         "success": "ai-audio/river-sprout-05-success.mp3"
-      }
+      },
+      "strategyType": "part-whole",
+      "animationKind": "part-whole",
+      "rescueDinoId": "brachio",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "7 和 2 合起来"
     },
     {
       "id": "river-sprout-06",
@@ -1358,7 +1623,12 @@
         "read": "ai-audio/river-sprout-06-read.mp3",
         "hint": "ai-audio/river-sprout-06-hint.mp3",
         "success": "ai-audio/river-sprout-06-success.mp3"
-      }
+      },
+      "strategyType": "count-all",
+      "animationKind": "counting",
+      "rescueDinoId": "rex",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "每个都点亮数一数"
     },
     {
       "id": "river-sprout-07",
@@ -1383,7 +1653,12 @@
         "read": "ai-audio/river-sprout-07-read.mp3",
         "hint": "ai-audio/river-sprout-07-hint.mp3",
         "success": "ai-audio/river-sprout-07-success.mp3"
-      }
+      },
+      "strategyType": "part-whole",
+      "animationKind": "part-whole",
+      "rescueDinoId": "raptor",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "从 8 里拿走 3"
     },
     {
       "id": "river-sprout-08",
@@ -1408,7 +1683,12 @@
         "read": "ai-audio/river-sprout-08-read.mp3",
         "hint": "ai-audio/river-sprout-08-hint.mp3",
         "success": "ai-audio/river-sprout-08-success.mp3"
-      }
+      },
+      "strategyType": "count-all",
+      "animationKind": "counting",
+      "rescueDinoId": "trike",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "每个都点亮数一数"
     },
     {
       "id": "river-helper-01",
@@ -1433,7 +1713,12 @@
         "read": "ai-audio/river-helper-01-read.mp3",
         "hint": "ai-audio/river-helper-01-hint.mp3",
         "success": "ai-audio/river-helper-01-success.mp3"
-      }
+      },
+      "strategyType": "count-on",
+      "animationKind": "number-line",
+      "rescueDinoId": "stego",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "从 8 往后跳 5 下"
     },
     {
       "id": "river-helper-02",
@@ -1458,7 +1743,12 @@
         "read": "ai-audio/river-helper-02-read.mp3",
         "hint": "ai-audio/river-helper-02-hint.mp3",
         "success": "ai-audio/river-helper-02-success.mp3"
-      }
+      },
+      "strategyType": "count-on",
+      "animationKind": "number-line",
+      "rescueDinoId": "brachio",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "从 7 往后跳 6 下"
     },
     {
       "id": "river-helper-03",
@@ -1483,7 +1773,12 @@
         "read": "ai-audio/river-helper-03-read.mp3",
         "hint": "ai-audio/river-helper-03-hint.mp3",
         "success": "ai-audio/river-helper-03-success.mp3"
-      }
+      },
+      "strategyType": "make-ten",
+      "animationKind": "ten-frame",
+      "rescueDinoId": "rex",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "9 先变 10，再加 3"
     },
     {
       "id": "river-helper-04",
@@ -1508,7 +1803,12 @@
         "read": "ai-audio/river-helper-04-read.mp3",
         "hint": "ai-audio/river-helper-04-hint.mp3",
         "success": "ai-audio/river-helper-04-success.mp3"
-      }
+      },
+      "strategyType": "make-ten",
+      "animationKind": "ten-frame",
+      "rescueDinoId": "raptor",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "8 先变 10，再加 4"
     },
     {
       "id": "river-helper-05",
@@ -1533,7 +1833,12 @@
         "read": "ai-audio/river-helper-05-read.mp3",
         "hint": "ai-audio/river-helper-05-hint.mp3",
         "success": "ai-audio/river-helper-05-success.mp3"
-      }
+      },
+      "strategyType": "part-whole",
+      "animationKind": "part-whole",
+      "rescueDinoId": "trike",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "从 14 里拿走 5"
     },
     {
       "id": "river-helper-06",
@@ -1558,7 +1863,12 @@
         "read": "ai-audio/river-helper-06-read.mp3",
         "hint": "ai-audio/river-helper-06-hint.mp3",
         "success": "ai-audio/river-helper-06-success.mp3"
-      }
+      },
+      "strategyType": "count-all",
+      "animationKind": "counting",
+      "rescueDinoId": "stego",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "每个都点亮数一数"
     },
     {
       "id": "river-helper-07",
@@ -1583,7 +1893,12 @@
         "read": "ai-audio/river-helper-07-read.mp3",
         "hint": "ai-audio/river-helper-07-hint.mp3",
         "success": "ai-audio/river-helper-07-success.mp3"
-      }
+      },
+      "strategyType": "part-whole",
+      "animationKind": "part-whole",
+      "rescueDinoId": "brachio",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "从 15 里拿走 8"
     },
     {
       "id": "river-helper-08",
@@ -1608,7 +1923,12 @@
         "read": "ai-audio/river-helper-08-read.mp3",
         "hint": "ai-audio/river-helper-08-hint.mp3",
         "success": "ai-audio/river-helper-08-success.mp3"
-      }
+      },
+      "strategyType": "count-all",
+      "animationKind": "counting",
+      "rescueDinoId": "rex",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "每个都点亮数一数"
     },
     {
       "id": "river-hero-01",
@@ -1633,7 +1953,12 @@
         "read": "ai-audio/river-hero-01-read.mp3",
         "hint": "ai-audio/river-hero-01-hint.mp3",
         "success": "ai-audio/river-hero-01-success.mp3"
-      }
+      },
+      "strategyType": "make-ten",
+      "animationKind": "ten-frame",
+      "rescueDinoId": "raptor",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "9 先变 10，再加 7"
     },
     {
       "id": "river-hero-02",
@@ -1658,7 +1983,12 @@
         "read": "ai-audio/river-hero-02-read.mp3",
         "hint": "ai-audio/river-hero-02-hint.mp3",
         "success": "ai-audio/river-hero-02-success.mp3"
-      }
+      },
+      "strategyType": "make-ten",
+      "animationKind": "ten-frame",
+      "rescueDinoId": "trike",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "12 先变 10，再加 8"
     },
     {
       "id": "river-hero-03",
@@ -1683,7 +2013,12 @@
         "read": "ai-audio/river-hero-03-read.mp3",
         "hint": "ai-audio/river-hero-03-hint.mp3",
         "success": "ai-audio/river-hero-03-success.mp3"
-      }
+      },
+      "strategyType": "make-ten",
+      "animationKind": "ten-frame",
+      "rescueDinoId": "stego",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "13 先变 10，再加 10"
     },
     {
       "id": "river-hero-04",
@@ -1708,7 +2043,12 @@
         "read": "ai-audio/river-hero-04-read.mp3",
         "hint": "ai-audio/river-hero-04-hint.mp3",
         "success": "ai-audio/river-hero-04-success.mp3"
-      }
+      },
+      "strategyType": "make-ten",
+      "animationKind": "ten-frame",
+      "rescueDinoId": "brachio",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "11 先变 10，再加 9"
     },
     {
       "id": "river-hero-05",
@@ -1733,7 +2073,12 @@
         "read": "ai-audio/river-hero-05-read.mp3",
         "hint": "ai-audio/river-hero-05-hint.mp3",
         "success": "ai-audio/river-hero-05-success.mp3"
-      }
+      },
+      "strategyType": "break-ten",
+      "animationKind": "break-ten",
+      "rescueDinoId": "rex",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "20 拆成 10 和 10"
     },
     {
       "id": "river-hero-06",
@@ -1758,7 +2103,12 @@
         "read": "ai-audio/river-hero-06-read.mp3",
         "hint": "ai-audio/river-hero-06-hint.mp3",
         "success": "ai-audio/river-hero-06-success.mp3"
-      }
+      },
+      "strategyType": "break-ten",
+      "animationKind": "break-ten",
+      "rescueDinoId": "raptor",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "18 拆成 10 和 8"
     },
     {
       "id": "river-hero-07",
@@ -1783,7 +2133,12 @@
         "read": "ai-audio/river-hero-07-read.mp3",
         "hint": "ai-audio/river-hero-07-hint.mp3",
         "success": "ai-audio/river-hero-07-success.mp3"
-      }
+      },
+      "strategyType": "break-ten",
+      "animationKind": "break-ten",
+      "rescueDinoId": "trike",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "16 拆成 10 和 6"
     },
     {
       "id": "river-hero-08",
@@ -1808,7 +2163,12 @@
         "read": "ai-audio/river-hero-08-read.mp3",
         "hint": "ai-audio/river-hero-08-hint.mp3",
         "success": "ai-audio/river-hero-08-success.mp3"
-      }
+      },
+      "strategyType": "break-ten",
+      "animationKind": "break-ten",
+      "rescueDinoId": "stego",
+      "sceneRewardId": "supply",
+      "strategySummaryText": "15 拆成 10 和 5"
     }
   ]
 }

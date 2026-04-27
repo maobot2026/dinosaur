@@ -4,6 +4,19 @@ export type HintType = "leaf" | "egg" | "fruit" | "footprint";
 export type Operation = "add" | "subtract";
 export type Difficulty = "sprout" | "helper" | "hero";
 export type RescueLevel = "valley" | "nest" | "river";
+export type StrategyType =
+  | "count-all"
+  | "count-on"
+  | "part-whole"
+  | "make-ten"
+  | "break-ten";
+export type AnimationKind =
+  | "counting"
+  | "number-line"
+  | "part-whole"
+  | "ten-frame"
+  | "break-ten";
+export type SceneRewardId = "bridge" | "nest" | "supply";
 
 export type AiVoiceClips = {
   read: string | null;
@@ -25,6 +38,11 @@ export type Question = {
   successText: string;
   mission: string;
   hintType: HintType;
+  strategyType: StrategyType;
+  animationKind: AnimationKind;
+  rescueDinoId: string;
+  sceneRewardId: SceneRewardId;
+  strategySummaryText: string;
   options: number[];
   audio: AiVoiceClips;
 };
